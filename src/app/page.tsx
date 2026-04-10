@@ -9,7 +9,7 @@ const news = [
     title: "Einladung Jahreshauptversammlung 2026",
     date: "15. April 2026",
     text: "Am 15.04.2026 findet die nächste JHV statt. Alle Mitglieder sind herzlich eingeladen.",
-    href: "http://erding-ost.de/dokumente/Einladung_JHV_2026.pdf",
+    href: "https://erding-ost.de/dokumente/Einladung_JHV_2026.pdf",
     cta: "Einladung herunterladen",
     color: "badge--red"
   },
@@ -17,7 +17,7 @@ const news = [
     title: "Protokoll der JHV 2025",
     date: "2025",
     text: "Das Protokoll der letzten Jahreshauptversammlung steht als PDF zum Download bereit.",
-    href: "http://erding-ost.de/dokumente/jhv-2025-protokoll.pdf",
+    href: "https://erding-ost.de/dokumente/jhv-2025-protokoll.pdf",
     cta: "Protokoll öffnen",
     color: "badge--blue"
   },
@@ -25,7 +25,7 @@ const news = [
     title: "ARD nur noch in HD",
     date: "Seit Januar 2025",
     text: "Die Programme der ARD laufen nur noch in HDTV. Informationen zur SD-Abschaltung im Kabelnetz.",
-    href: "http://erding-ost.de/dokumente/Abschaltung_SD_OEFF_RECHTL.pdf",
+    href: "https://erding-ost.de/dokumente/Abschaltung_SD_OEFF_RECHTL.pdf",
     cta: "Hinweis lesen",
     color: "badge--orange"
   },
@@ -455,6 +455,7 @@ export default function HomePage() {
           <div className="footer__links">
             <a href="mailto:webmaster@erding-ost.de">webmaster@erding-ost.de</a>
             <a href="https://erding-ost.de/impressum.htm" target="_blank" rel="noreferrer">Impressum</a>
+            <Link href="/datenschutz">Datenschutz</Link>
             <a href="#verein">Satzung</a>
           </div>
           <p className="footer__copy">

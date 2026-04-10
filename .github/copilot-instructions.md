@@ -53,7 +53,7 @@ docs/
 
 ## Legal Requirements (Germany)
 
-This is a German site subject to TMG/DSGVO. See `.github/instructions/de-rechtssicher-abmahnung.instructions.md` for full rules. Key points:
+This is a German site subject to DDG/DSGVO/TDDDG. See `.github/instructions/de-rechtssicher-abmahnung.instructions.md` for full rules. Key points:
 - Impressum must be reachable within 2 clicks
 - No external resource loading without consent (fonts, embeds, analytics)
 - No tracking or cookies without opt-in consent
