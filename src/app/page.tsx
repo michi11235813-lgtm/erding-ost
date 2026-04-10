@@ -166,16 +166,21 @@ export default function HomePage() {
         {/* ── Hero ── */}
         <section className="hero">
           <div className="hero__inner">
-            <span className="hero__badge">Seit 1974</span>
-            <h1>Siedlungsverein Erding-Ost e.V.</h1>
-            <p className="hero__sub">
-              134 Einfamilienhäuser, eine Gemeinschaft. Wir kümmern uns um
-              Kabelanlage, Gemeinschaftsflächen und das Erscheinungsbild unserer
-              Siedlung.
-            </p>
-            <div className="hero__actions">
-              <a href="#aktuelles" className="btn btn--white">Aktuelle Meldungen</a>
-              <a href="#kontakt" className="btn btn--ghost">Kontakt aufnehmen</a>
+            <div className="hero__logo">
+              <Image src="/logo.jpg" alt="Vereinslogo Siedlungsverein Erding-Ost" width={160} height={160} priority />
+            </div>
+            <div className="hero__text">
+              <span className="hero__badge">Seit 1974</span>
+              <h1>Siedlungsverein Erding-Ost e.V.</h1>
+              <p className="hero__sub">
+                134 Einfamilienhäuser, eine Gemeinschaft. Wir kümmern uns um
+                Kabelanlage, Gemeinschaftsflächen und das Erscheinungsbild unserer
+                Siedlung.
+              </p>
+              <div className="hero__actions">
+                <a href="#aktuelles" className="btn btn--white">Aktuelle Meldungen</a>
+                <a href="#kontakt" className="btn btn--ghost">Kontakt aufnehmen</a>
+              </div>
             </div>
           </div>
         </section>
@@ -214,7 +219,7 @@ export default function HomePage() {
         </section>
 
         {/* ── Siedlung ── */}
-        <section id="siedlung" className="section">
+        <section id="siedlung" className="section section--alt">
           <div className="section__header">
             <h2 className="section__title">Die Siedlung</h2>
             <p className="section__desc">134 Einfamilienhäuser in Erding-Ost</p>
@@ -410,7 +415,7 @@ export default function HomePage() {
         </section>
 
         {/* ── Dokumente ── */}
-        <section id="dokumente" className="section">
+        <section id="dokumente" className="section section--alt">
           <div className="section__header">
             <h2 className="section__title">Dokumente &amp; Formulare</h2>
             <p className="section__desc">Alle wichtigen Unterlagen zum Herunterladen</p>
@@ -457,7 +462,7 @@ export default function HomePage() {
         </section>
 
         {/* ── Lärmschutzwall ── */}
-        <section id="laermschutz" className="section">
+        <section id="laermschutz" className="section section--alt">
           <div className="section__header">
             <h2 className="section__title">Lärmschutzwall B388</h2>
             <p className="section__desc">
@@ -485,17 +490,17 @@ export default function HomePage() {
             <p className="section__desc">So erreichen Sie uns</p>
           </div>
           <div className="contact-grid">
-            <a className="contact-card" href="mailto:webmaster@erding-ost.de">
-              <div className="contact-card__icon">🌐</div>
-              <div className="contact-card__role">Webmaster</div>
-              <div className="contact-card__name">Christian Sack</div>
-              <div className="contact-card__email">webmaster@erding-ost.de</div>
-            </a>
             <a className="contact-card" href="mailto:vorstand@erding-ost.de">
               <div className="contact-card__icon">👤</div>
               <div className="contact-card__role">1. Vorsitzender</div>
               <div className="contact-card__name">Thomas Feldt</div>
               <div className="contact-card__email">vorstand@erding-ost.de</div>
+            </a>
+            <a className="contact-card" href="mailto:webmaster@erding-ost.de">
+              <div className="contact-card__icon">🌐</div>
+              <div className="contact-card__role">Webmaster</div>
+              <div className="contact-card__name">Christian Sack</div>
+              <div className="contact-card__email">webmaster@erding-ost.de</div>
             </a>
           </div>
         </section>
