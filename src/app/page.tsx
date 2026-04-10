@@ -402,10 +402,8 @@ export default function HomePage() {
           </div>
 
           {/* Verstärkerstandorte */}
-          <div className="section__header" style={{ marginTop: "2rem" }}>
-            <h2 className="section__title">Verstärkerstandorte</h2>
-            <p className="section__desc">In diesen Häusern befinden sich die Kabelverstärker für die jeweilige Hauszeile</p>
-          </div>
+          <h3 className="subsection__title" style={{ marginTop: "2rem" }}>Verstärkerstandorte</h3>
+          <p className="section__desc">In diesen Häusern befinden sich die Kabelverstärker für die jeweilige Hauszeile</p>
           <div className="amp-map-wrap">
             <AmpMapWrapper />
           </div>
@@ -418,9 +416,7 @@ export default function HomePage() {
           </div>
 
           {/* UKW Radiosender */}
-          <div className="section__header" style={{ marginTop: "2rem" }}>
-            <h2 className="section__title">UKW-Radioprogramme im Kabelnetz</h2>
-          </div>
+          <h3 className="subsection__title" style={{ marginTop: "2rem" }}>UKW-Radioprogramme im Kabelnetz</h3>
           <div className="radio-table-wrap">
             <table className="radio-table">
               <thead>
