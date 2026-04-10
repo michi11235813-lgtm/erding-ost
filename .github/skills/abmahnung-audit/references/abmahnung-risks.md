@@ -2,7 +2,7 @@
 
 This reference lists the most common Abmahnung risks for German-facing websites, organized by category. Each entry includes the legal basis, typical penalty range, and what must be implemented to mitigate the risk.
 
-Last updated: 2026-04-04
+Last updated: 2026-04-10
 
 > **Hinweis:** Seit 14.05.2024 ersetzt das Digitale-Dienste-Gesetz (DDG) das Telemediengesetz (TMG). Die Impressumspflicht ergibt sich jetzt aus § 5 DDG (inhaltlich weitgehend identisch mit § 5 TMG). Ältere Urteile und Kommentare referenzieren noch TMG — die Pflichten gelten unter DDG fort.
 
@@ -45,7 +45,7 @@ Severity: **Hoch**
 
 ---
 
-## Category 3: Cookies & Consent (TTDSG § 25, DSGVO Art. 6/7)
+## Category 3: Cookies & Consent (TDDDG § 25, DSGVO Art. 6/7)
 
 Severity: **Hoch**
 
@@ -53,12 +53,12 @@ Severity: **Hoch**
 
 | ID | Risk | Legal Basis | Implementation Requirement |
 |---|---|---|---|
-| CON-01 | Tracking ohne Einwilligung | § 25 TTDSG, DSGVO Art. 6 Abs. 1 lit. a | Keine nicht-essentiellen Cookies/Tracking vor explizitem Opt-in |
+| CON-01 | Tracking ohne Einwilligung | § 25 TDDDG, DSGVO Art. 6 Abs. 1 lit. a | Keine nicht-essentiellen Cookies/Tracking vor explizitem Opt-in |
 | CON-02 | Ablehnen schwerer als Akzeptieren | BGH, Urteil v. 28.05.2020 – I ZR 7/16 (Cookie-Banner II) | Reject-Button gleich groß, gleiche Farbe/Prominenz wie Accept |
 | CON-03 | Vorausgewählte Checkboxen | EuGH, Urteil v. 01.10.2019 – C-673/17 (Planet49) | Keine vorangekreuzten Checkboxen für optionale Cookie-Kategorien |
 | CON-04 | Cookie-Wall | EDSA Leitlinien 05/2020 | Kein Sperren von Inhalten bis Consent erteilt wird |
 | CON-05 | Kein Widerruf möglich | Art. 7 Abs. 3 DSGVO | Jederzeit widerrufbar, z.B. Footer-Link "Cookie-Einstellungen" |
-| CON-06 | Consent nicht gespeichert | TTDSG § 25 | Consent-Entscheidung speichern, nicht bei jedem Seitenaufruf erneut fragen |
+| CON-06 | Consent nicht gespeichert | TDDDG § 25 | Consent-Entscheidung speichern, nicht bei jedem Seitenaufruf erneut fragen |
 | CON-07 | Nudging / Dark Patterns im Banner | DSK-Orientierungshilfe Telemedien 2021 | Keine irreführende Farbgebung, Größe, oder Formulierung die eine Richtung bevorzugt |
 
 ---
@@ -76,7 +76,7 @@ Severity: **Hoch** (nach LG München Google-Fonts-Urteil)
 | EXT-03 | Google Maps direkt eingebettet | DSGVO Art. 44 ff. | Consent-first Placeholder, dann laden |
 | EXT-04 | Social Media Buttons mit Tracking | DSGVO Art. 44 ff. | Shariff-Muster oder einfache Share-Links (kein SDK-Load) |
 | EXT-05 | CDN für JS-Libraries | DSGVO Art. 44 ff. | Self-hosten: kein cdnjs, unpkg, jsdelivr ohne Consent |
-| EXT-06 | Externe Analytics ohne Consent | § 25 TTDSG | Kein Google Analytics, Hotjar etc. vor explizitem Consent |
+| EXT-06 | Externe Analytics ohne Consent | § 25 TDDDG | Kein Google Analytics, Hotjar etc. vor explizitem Consent |
 | EXT-07 | Gravatar / externe Avatare | DSGVO Art. 44 ff. | IP-Übermittlung — self-hosten oder Consent |
 
 ---

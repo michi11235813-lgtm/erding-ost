@@ -508,6 +508,7 @@ export default function HomePage() {
           <div className="footer__links">
             <a href="mailto:webmaster@erding-ost.de">webmaster@erding-ost.de</a>
             <Link href="/impressum">Impressum</Link>
+            <Link href="/datenschutz">Datenschutz</Link>
             <a href="#verein">Satzung</a>
           </div>
           <p className="footer__copy">
