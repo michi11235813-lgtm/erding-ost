@@ -14,7 +14,7 @@ const currentNews = [
     text: "Am 15.04.2026 findet die nächste JHV statt. Alle Mitglieder sind herzlich eingeladen.",
     href: "/dokumente/Einladung_JHV_2026.pdf",
     cta: "Einladung herunterladen",
-    color: "badge--red"
+    color: "badge"
   },
   {
     title: "Protokoll der JHV 2025",
@@ -22,7 +22,7 @@ const currentNews = [
     text: "Das Protokoll der letzten Jahreshauptversammlung steht als PDF zum Download bereit.",
     href: "/dokumente/jhv-2025-protokoll.pdf",
     cta: "Protokoll öffnen",
-    color: "badge--blue"
+    color: "badge"
   },
   {
     title: "Grüngut-Container 2025",
@@ -30,7 +30,7 @@ const currentNews = [
     text: "Rückblick auf die diesjährige Grüncontainer-Aktion.",
     href: "#",
     cta: "Mehr erfahren",
-    color: "badge--teal"
+    color: "badge"
   }
 ];
 
@@ -41,7 +41,7 @@ const archiveNews = [
     text: "Die Programme der ARD laufen nur noch in HDTV. Informationen zur SD-Abschaltung im Kabelnetz.",
     href: "/dokumente/Abschaltung_SD_OEFF_RECHTL.pdf",
     cta: "Hinweis lesen",
-    color: "badge--orange"
+    color: "badge"
   },
   {
     title: "Garagenplatzzuordnungen",
@@ -49,7 +49,7 @@ const archiveNews = [
     text: "Die Zuordnung der Garagen zu den Wohneinheiten ist aktualisiert. Bei Bedarf bitte den Vorstand kontaktieren.",
     href: "#verein",
     cta: "Zum Vorstand",
-    color: "badge--red"
+    color: "badge"
   }
 ];
 
