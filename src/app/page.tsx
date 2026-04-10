@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import AmpMapWrapper from "./components/AmpMapWrapper";
+import MobileNav from "./components/MobileNav";
 
 /* ════════════════════════════════════════════
    DATA – extracted from all erding-ost.de pages
@@ -191,6 +192,7 @@ export default function HomePage() {
             <a href="#rueckblicke">Rückblicke</a>
             <a href="#kontakt">Kontakt</a>
           </nav>
+          <MobileNav />
         </div>
       </header>
 
