@@ -28,7 +28,7 @@ const currentNews = [
     title: "Grüngut-Container 2025",
     date: "24.–26. Okt. 2025",
     text: "Grünschnitt konnte an drei Tagen kostenlos entsorgt werden.",
-    href: "#",
+    href: "/dokumente/Aushang_GruengutContainer-2025.pdf",
     cta: "Mehr erfahren",
     color: "badge"
   }
@@ -526,6 +526,12 @@ export default function HomePage() {
               <div className="contact-card__role">Webmaster</div>
               <div className="contact-card__name">Christian Sack</div>
               <div className="contact-card__email">webmaster@erding-ost.de</div>
+            </a>
+            <a className="contact-card" href="https://chat.whatsapp.com/D4Z8zJNJzKR19uh0ZGAhsG" target="_blank" rel="noreferrer">
+              <div className="contact-card__icon">💬</div>
+              <div className="contact-card__role">WhatsApp Gruppe</div>
+              <div className="contact-card__name">RHS Erding-Ost e.V.</div>
+              <div className="contact-card__email">Beitreten →</div>
             </a>
           </div>
         </section>
