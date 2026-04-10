@@ -93,11 +93,7 @@ h1.section__title { font-size: 1.8rem; }
 .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
 .news-card { background: var(--c-white); border: 1px solid var(--c-gray-200); border-radius: var(--r-md); padding: 1.35rem; display: flex; flex-direction: column; gap: .4rem; transition: box-shadow .2s, transform .2s; }
 .news-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-.badge { display: inline-block; width: fit-content; padding: .15rem .55rem; border-radius: 999px; font-size: .7rem; font-weight: 600; letter-spacing: .02em; }
-.badge--red { background: var(--c-primary-light); color: var(--c-primary); }
-.badge--blue { background: var(--c-secondary-light); color: var(--c-secondary); }
-.badge--teal { background: var(--c-teal-light); color: var(--c-teal); }
-.badge--orange { background: var(--c-orange-light); color: var(--c-orange); }
+.badge { display: inline-block; width: fit-content; padding: .15rem .55rem; border-radius: 999px; font-size: .7rem; font-weight: 600; letter-spacing: .02em; background: var(--c-gray-100); color: var(--c-gray-600); }
 .news-card h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; }
 .news-card > p { font-size: .88rem; color: var(--c-gray-600); line-height: 1.55; flex: 1; }
 .card-cta { display: inline-flex; align-items: center; gap: .25rem; font-size: .82rem; font-weight: 600; color: var(--c-primary); margin-top: .2rem; cursor: pointer; transition: gap .15s, color .15s; }
