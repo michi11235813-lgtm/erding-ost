@@ -150,7 +150,7 @@ const protokolle = [
   { year: 2013, href: "/dokumente/jhv-2013-protokoll.pdf" },
   { year: 2012, href: "/dokumente/jhv-2012-protokoll.pdf" },
   { year: 2011, href: "/dokumente/jhv-2011-protokoll.pdf" },
-  { year: "a.o. 2010", label: "a.o. HV 2010", href: "/dokumente/a-hv-2010-protokoll.pdf" },
+  { year: "2010", label: "JHV 2010", href: "/dokumente/a-hv-2010-protokoll.pdf" },
   { year: 2010, href: "/dokumente/jhv-2010-protokoll.pdf" },
   { year: 2009, href: "/dokumente/jhv-2009-protokoll.pdf" },
   { year: 2008, href: "/dokumente/jhv-2008-protokoll.pdf" },
