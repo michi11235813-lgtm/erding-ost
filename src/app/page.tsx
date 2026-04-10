@@ -377,19 +377,28 @@ export default function HomePage() {
             </article>
             <article className="info-card">
               <div className="info-card__icon">🔧</div>
-              <h3>Service &amp; Störungen</h3>
+              <h3>Unser Servicepartner</h3>
               <p>
-                Service-Partner: Sempt-EW. Bitte zuerst prüfen, ob das Problem
-                am eigenen Gerät liegt, und ggf. die Nachbarn fragen.
-                Bei allgemeinen Störungen:
+                Sempt-EW hat die SAT-Kabelanlage installiert und übernimmt weiterhin den technischen
+                Service. Störungen werden – soweit möglich – auch an Wochenenden und Feiertagen behoben.
+                Ein Wartungsvertrag wird jedoch nicht angeboten.
               </p>
-              <p style={{ marginTop: ".4rem", fontWeight: 600, color: "var(--c-gray-900)" }}>
-                Tel: (08122) 9827-21<br />
-                E-Mail: installation@sew-erding.de
+            </article>
+            <article className="info-card">
+              <div className="info-card__icon">📞</div>
+              <h3>Bei Störungen der Kabelanlage</h3>
+              <p><strong>Sempt-EW Hotline:</strong> (08122) 9827-21</p>
+              <p style={{ marginTop: ".3rem", fontSize: ".85rem" }}>
+                – Der Verein übernimmt Reparaturkosten der Kabelanlage.<br />
+                – Für Reparaturen nach dem Übergabepunkt ist der Hausbewohner/Eigentümer zahlungspflichtig.
               </p>
-              <p style={{ marginTop: ".3rem", fontSize: ".82rem" }}>
-                Mo–Do: 07:00–16:00 · Fr: 07:00–12:00<br />
-                Notfall-Bereitschaft: (08122) 9827-0
+              <p style={{ marginTop: ".6rem" }}><strong>Siedlungsintern:</strong> Christian &amp; Lothar Sack</p>
+              <p style={{ marginTop: ".3rem", fontSize: ".85rem" }}>
+                Tel: (08122) 90 00 36<br />
+                E-Mail: <a href="mailto:kabelanlage@erding-ost.de" style={{ color: "var(--c-secondary)" }}>kabelanlage@erding-ost.de</a>
+              </p>
+              <p style={{ marginTop: ".3rem", fontSize: ".82rem", color: "var(--c-gray-600)" }}>
+                Bitte alle Reparaturen an der Kabelanlage melden (ggf. nachträglich).
               </p>
             </article>
           </div>
@@ -527,6 +536,18 @@ export default function HomePage() {
               <div className="contact-card__role">WhatsApp Gruppe</div>
               <div className="contact-card__name">RHS Erding-Ost e.V.</div>
               <div className="contact-card__email">Beitreten →</div>
+            </a>
+            <a className="contact-card" href="tel:0812298270">
+              <div className="contact-card__icon">🔧</div>
+              <div className="contact-card__role">Kabelanlage – SEW Hotline</div>
+              <div className="contact-card__name">Sempt-EW</div>
+              <div className="contact-card__email">(08122) 9827-21</div>
+            </a>
+            <a className="contact-card" href="mailto:kabelanlage@erding-ost.de">
+              <div className="contact-card__icon">📡</div>
+              <div className="contact-card__role">Kabelanlage – Siedlungsintern</div>
+              <div className="contact-card__name">Christian &amp; Lothar Sack</div>
+              <div className="contact-card__email">kabelanlage@erding-ost.de · (08122) 90 00 36</div>
             </a>
           </div>
         </section>
