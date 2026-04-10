@@ -494,25 +494,17 @@ export default function HomePage() {
       {/* ── Footer ── */}
       <footer className="footer">
         <div className="footer__inner container">
-          <div>
-            <div className="footer__brand">
-              <Image src="/logo.jpg" alt="Logo" width={28} height={28} />
-              <span>Siedlungsverein Erding-Ost e.V.</span>
-            </div>
-            <p className="footer__addr" style={{ marginTop: ".4rem" }}>
-              c/o Christian Sack<br />
-              Dr.-Lehmer-Str. 52<br />
-              D-85435 Erding
-            </p>
+          <div className="footer__brand">
+            <Image src="/logo.jpg" alt="Logo" width={28} height={28} />
+            <span>Siedlungsverein Erding-Ost e.V.</span>
           </div>
           <div className="footer__links">
-            <a href="mailto:webmaster@erding-ost.de">webmaster@erding-ost.de</a>
+            <a href="mailto:webmaster@erding-ost.de">Kontakt</a>
             <Link href="/impressum">Impressum</Link>
             <Link href="/datenschutz">Datenschutz</Link>
-            <a href="#verein">Satzung</a>
           </div>
           <p className="footer__copy">
-            © {new Date().getFullYear()} Reihenhaussiedlung Erding-Ost e.V. · Alle Rechte vorbehalten
+            © {new Date().getFullYear()} Siedlungsverein Erding-Ost e.V.
           </p>
         </div>
       </footer>

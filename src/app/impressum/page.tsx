@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Impressum – Erding-Ost e.V.",
+export const metadata: Metadata = {
+  title: "Impressum | Siedlungsverein Erding-Ost e.V.",
+  description: "Impressum des Siedlungsverein Erding-Ost e.V. gemäß § 5 DDG",
 };
 
 export default function ImpressumPage() {
@@ -24,49 +26,96 @@ export default function ImpressumPage() {
         <section className="section">
           <div className="section__header">
             <h1 className="section__title">Impressum</h1>
+            <p className="section__desc">Angaben gemäß § 5 DDG</p>
           </div>
 
-          <div className="info-card" style={{ maxWidth: 600 }}>
-            <h3>Angaben gemäß § 5 TMG</h3>
+          {/* ── Diensteanbieter ── */}
+          <div className="info-card" style={{ maxWidth: 640 }}>
+            <h2>Diensteanbieter</h2>
             <p style={{ marginTop: ".75rem" }}>
-              Reihenhaussiedlung Erding-Ost e.V.<br />
+              Siedlungsverein Erding-Ost e.V.<br />
               c/o Christian Sack<br />
               Dr.-Lehmer-Str. 52<br />
               D-85435 Erding
             </p>
-            <p style={{ marginTop: "1rem" }}>
-              <strong>Kontakt:</strong>{" "}
-              <a href="mailto:webmaster@erding-ost.de" style={{ color: "var(--c-secondary)" }}>
+          </div>
+
+          {/* ── Kontakt ── */}
+          <div className="info-card" style={{ maxWidth: 640, marginTop: "1rem" }}>
+            <h2>Kontakt</h2>
+            <p style={{ marginTop: ".75rem" }}>
+              E-Mail:{" "}
+              <a href="mailto:webmaster@erding-ost.de">
                 webmaster@erding-ost.de
               </a>
             </p>
           </div>
 
-          <div className="info-card" style={{ maxWidth: 600, marginTop: "1rem" }}>
-            <h3>Haftungshinweis</h3>
+          {/* ── Vertretungsberechtigte ── */}
+          <div className="info-card" style={{ maxWidth: 640, marginTop: "1rem" }}>
+            <h2>Vertretungsberechtigte</h2>
             <p style={{ marginTop: ".75rem" }}>
-              Mit Urteil vom 12. Mai 1998 hat das Landgericht Hamburg entschieden,
-              dass man durch die Ausbringung eines Links die Inhalte der gelinkten
-              Seite ggf. mit zu verantworten hat. Dies kann – so das LG – nur
-              dadurch verhindert werden, dass man sich ausdrücklich von diesen
-              Inhalten distanziert.
-            </p>
-            <p style={{ marginTop: ".5rem" }}>
-              Wir möchten ausdrücklich betonen, dass wir keinerlei Einfluss auf die
-              Gestaltung und die Inhalte der gelinkten Seiten haben. Deshalb
-              distanzieren wir uns hiermit ausdrücklich von allen Inhalten aller
-              gelinkten Seiten auf dieser Website und machen uns ihre Inhalte nicht
-              zu eigen. Diese Erklärung gilt für alle auf dieser Website angebrachten
-              Links.
+              1. Vorsitzender: Thomas Feldt<br />
+              2. Vorsitzender: Christoph Lotter
             </p>
           </div>
+
+          {/* ── Vereinsregister ── */}
+          <div className="info-card" style={{ maxWidth: 640, marginTop: "1rem" }}>
+            <h2>Vereinsregister</h2>
+            <p style={{ marginTop: ".75rem" }}>
+              {/* TODO: Registergericht und Registernummer eintragen, z. B.: */}
+              {/* Registergericht: Amtsgericht Erding<br /> */}
+              {/* Registernummer: VR XXXX */}
+              Registereintrag wird auf Anfrage mitgeteilt. Bitte wenden Sie sich
+              per E-Mail an{" "}
+              <a href="mailto:webmaster@erding-ost.de">webmaster@erding-ost.de</a>.
+            </p>
+          </div>
+
+          {/* ── Verantwortlicher nach § 18 Abs. 2 MStV ── */}
+          <div className="info-card" style={{ maxWidth: 640, marginTop: "1rem" }}>
+            <h2>Verantwortlicher für den Inhalt nach § 18 Abs. 2 MStV</h2>
+            <p style={{ marginTop: ".75rem" }}>
+              Thomas Feldt (1. Vorsitzender)<br />
+              c/o Siedlungsverein Erding-Ost e.V.<br />
+              Dr.-Lehmer-Str. 52<br />
+              D-85435 Erding
+            </p>
+          </div>
+
+          {/* ── Streitschlichtung ── */}
+          <div className="info-card" style={{ maxWidth: 640, marginTop: "1rem" }}>
+            <h2>Streitschlichtung</h2>
+            <p style={{ marginTop: ".75rem" }}>
+              Die Europäische Kommission stellt eine Plattform zur
+              Online-Streitbeilegung (OS) bereit:{" "}
+              <a
+                href="https://ec.europa.eu/consumers/odr/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://ec.europa.eu/consumers/odr/
+              </a>
+              .
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              Wir sind nicht verpflichtet und nicht bereit, an
+              Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+              teilzunehmen.
+            </p>
+          </div>
+
+          <p style={{ marginTop: "1.5rem" }}>
+            <Link href="/datenschutz">Zur Datenschutzerklärung</Link>
+          </p>
         </section>
       </div>
 
       <footer className="footer">
         <div className="footer__inner container">
           <p className="footer__copy" style={{ width: "100%", textAlign: "center" }}>
-            &copy; {new Date().getFullYear()} Reihenhaussiedlung Erding-Ost e.V.
+            &copy; {new Date().getFullYear()} Siedlungsverein Erding-Ost e.V.
           </p>
         </div>
       </footer>
