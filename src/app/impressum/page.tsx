@@ -14,7 +14,7 @@ export default function ImpressumPage() {
         <div className="header__inner container">
           <Link href="/" className="header__brand">
             <Image src="/logo.jpg" alt="Logo" width={36} height={36} />
-            <span className="header__name">Erding-Ost e.V.</span>
+            <span className="header__name">RHS Erding-Ost e.V.</span>
           </Link>
           <nav className="header__nav">
             <Link href="/">Startseite</Link>
@@ -113,6 +113,10 @@ export default function ImpressumPage() {
 
       <footer className="footer">
         <div className="footer__inner container">
+          <div className="footer__links" style={{ width: "100%", justifyContent: "center" }}>
+            <Link href="/datenschutz">Datenschutz</Link>
+            <Link href="/">Startseite</Link>
+          </div>
           <p className="footer__copy" style={{ width: "100%", textAlign: "center" }}>
             &copy; {new Date().getFullYear()} Reihenhaussiedlung Erding-Ost e.V.
           </p>

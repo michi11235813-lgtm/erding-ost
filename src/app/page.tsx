@@ -392,7 +392,7 @@ export default function HomePage() {
               </p>
             </article>
             <article className="info-card">
-              <div className="info-card__icon">📞</div>
+              <div className="info-card__icon" aria-hidden="true">📞</div>
               <h3>Bei Störungen der Kabelanlage</h3>
               <p><strong>Sempt-EW Hotline:</strong> (08122) 9827-21</p>
               <p style={{ marginTop: ".3rem", fontSize: ".85rem" }}>
@@ -545,13 +545,13 @@ export default function HomePage() {
               <div className="contact-card__email">Beitreten →</div>
             </a>
             <a className="contact-card" href="tel:0812298270">
-              <div className="contact-card__icon">🔧</div>
+              <div className="contact-card__icon" aria-hidden="true">🔧</div>
               <div className="contact-card__role">Kabelanlage – SEW Hotline</div>
               <div className="contact-card__name">Sempt-EW</div>
               <div className="contact-card__email">(08122) 9827-21</div>
             </a>
             <a className="contact-card" href="mailto:kabelanlage@erding-ost.de">
-              <div className="contact-card__icon">📡</div>
+              <div className="contact-card__icon" aria-hidden="true">📡</div>
               <div className="contact-card__role">Kabelanlage – Siedlungsintern</div>
               <div className="contact-card__name">Christian &amp; Lothar Sack</div>
               <div className="contact-card__email">kabelanlage@erding-ost.de · (08122) 90 00 36</div>

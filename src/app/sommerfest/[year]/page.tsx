@@ -9,7 +9,7 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: Promise<{ year: string }> }) {
   return params.then((p) => ({
-    title: `Sommerfest ${p.year} – Erding-Ost e.V.`,
+    title: `Sommerfest ${p.year} – RHS Erding-Ost e.V.`,
   }));
 }
 
@@ -29,7 +29,7 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
         <div className="header__inner container">
           <Link href="/" className="header__brand">
             <Image src="/logo.jpg" alt="Logo" width={36} height={36} />
-            <span className="header__name">Erding-Ost e.V.</span>
+            <span className="header__name">RHS Erding-Ost e.V.</span>
           </Link>
           <nav className="header__nav">
             <Link href="/#aktuelles">Aktuelles</Link>
@@ -84,6 +84,11 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
 
       <footer className="footer">
         <div className="footer__inner container">
+          <div className="footer__links" style={{ width: "100%", justifyContent: "center" }}>
+            <Link href="/impressum">Impressum</Link>
+            <Link href="/datenschutz">Datenschutz</Link>
+            <Link href="/">Startseite</Link>
+          </div>
           <p className="footer__copy" style={{ width: "100%", textAlign: "center" }}>
             &copy; {new Date().getFullYear()} Reihenhaussiedlung Erding-Ost e.V.
           </p>
