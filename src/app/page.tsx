@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AmpMapWrapper from "./components/AmpMapWrapper";
 
 /* ════════════════════════════════════════════
    DATA – extracted from all erding-ost.de pages
@@ -372,6 +373,23 @@ export default function HomePage() {
             </article>
           </div>
 
+          {/* Verstärkerstandorte */}
+          <div className="section__header" style={{ marginTop: "2rem" }}>
+            <h2 className="section__title">Verstärkerstandorte</h2>
+            <p className="section__desc">In diesen Häusern befinden sich die Kabelverstärker für die jeweilige Hauszeile</p>
+          </div>
+          <div className="amp-map-wrap">
+            <AmpMapWrapper />
+          </div>
+          {Object.entries(amplifiers).map(([street, houses]) => (
+            <div className="amp-group" key={street}>
+              <div className="amp-group__title">{street}</div>
+              <ul className="amp-list">
+                {houses.map((h) => <li key={h}>{h}</li>)}
+              </ul>
+            </div>
+          ))}
+
           {/* UKW Radiosender */}
           <div className="section__header" style={{ marginTop: "2rem" }}>
             <h2 className="section__title">UKW-Radioprogramme im Kabelnetz</h2>
@@ -390,35 +408,6 @@ export default function HomePage() {
               </tbody>
             </table>
           </div>
-
-          {/* Verstärkerstandorte */}
-          <div className="section__header" style={{ marginTop: "2rem" }}>
-            <h2 className="section__title">Verstärkerstandorte</h2>
-            <p className="section__desc">In diesen Häusern befinden sich die Kabelverstärker für die jeweilige Hauszeile</p>
-          </div>
-          <div className="amp-map-wrap">
-            <iframe
-              title="Verstärkerstandorte Erding-Ost"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=11.8975%2C48.2990%2C11.9100%2C48.3040&layer=mapnik"
-              width="100%"
-              height="350"
-              style={{ border: 0, display: "block" }}
-              loading="lazy"
-            />
-            <p className="amp-map-caption">
-              <a href="https://www.openstreetmap.org/#map=17/48.3015/11.9038" target="_blank" rel="noreferrer">
-                Größere Karte anzeigen
-              </a>
-            </p>
-          </div>
-          {Object.entries(amplifiers).map(([street, houses]) => (
-            <div className="amp-group" key={street}>
-              <div className="amp-group__title">{street}</div>
-              <ul className="amp-list">
-                {houses.map((h) => <li key={h}>{h}</li>)}
-              </ul>
-            </div>
-          ))}
         </section>
 
         {/* ── Dokumente ── */}
