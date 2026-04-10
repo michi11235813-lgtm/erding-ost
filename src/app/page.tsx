@@ -360,7 +360,7 @@ export default function HomePage() {
         </section>
 
         {/* ── Kabelanlage ── */}
-        <section id="kabel" className="section kabel-section">
+        <section id="kabel" className="section">
           <div className="kabel-hero">
             <div className="section__header">
               <h2 className="section__title">Kabelanlage</h2>

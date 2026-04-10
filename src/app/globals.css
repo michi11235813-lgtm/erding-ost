@@ -2,7 +2,7 @@
    Erding-Ost Design System
    ══════════════════════════════════════════════ */
 :root {
-  --c-bg: #ffffff;
+  --c-bg: #f9f7f5;
   --c-white: #ffffff;
   --c-gray-100: #f5f2f0;
   --c-gray-200: #e8e4e1;
@@ -81,8 +81,8 @@ img { display: block; max-width: 100%; }
 .contact-card__email { font-size: .85rem; color: var(--c-primary); margin-top: .35rem; }
 
 /* ── Section ── */
-.section { margin-top: 0; padding: 3rem 0; }
-.section--alt { background: var(--c-primary-50); margin-left: -1.25rem; margin-right: -1.25rem; padding-left: 1.25rem; padding-right: 1.25rem; border-radius: var(--r-xl); box-shadow: 0 2px 8px rgba(74,66,64,.07); border: 1px solid var(--c-gray-200); }
+.section { margin-top: 1.25rem; padding: 2.5rem 2rem; background: var(--c-white); border-radius: var(--r-xl); border: 1px solid var(--c-gray-200); box-shadow: var(--shadow-xs); }
+.section--alt { background: var(--c-primary-50); }
 .section__header { margin-bottom: 1.25rem; }
 .section__title { font-size: 1.4rem; font-weight: 750; letter-spacing: -.015em; }
 h1.section__title { font-size: 1.8rem; }
@@ -191,7 +191,6 @@ h1.section__title { font-size: 1.8rem; }
 .amp-map-caption a:hover { text-decoration: underline; }
 
 /* ── Kabelanlage highlight ── */
-.kabel-section { margin-left: -1.25rem; margin-right: -1.25rem; padding-left: 1.25rem; padding-right: 1.25rem; }
 .kabel-hero { margin-bottom: 1.25rem; }
 .kabel-hero .section__title { font-size: 1.6rem; }
 
@@ -204,7 +203,7 @@ h1.section__title { font-size: 1.8rem; }
 .gallery-nav { display: flex; margin-top: 2rem; gap: 1rem; }
 
 /* ── Footer ── */
-.footer { margin-top: 0; border-top: 1px solid var(--c-gray-200); padding: 2rem 0 1.5rem; }
+.footer { margin-top: 1.25rem; border-top: none; padding: 2rem 0 1.5rem; background: var(--c-white); border-radius: var(--r-xl) var(--r-xl) 0 0; border: 1px solid var(--c-gray-200); border-bottom: none; }
 .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1.5rem; }
 .footer__brand { display: flex; align-items: center; gap: .5rem; }
 .footer__brand img { width: 28px; height: 28px; border-radius: 4px; object-fit: cover; }
@@ -235,11 +234,9 @@ h1.section__title { font-size: 1.8rem; }
   .hero__sub { font-size: .92rem; }
 
   /* Sections */
-  .section { padding: 2rem 0; }
-  .section--alt { margin-left: -1rem; margin-right: -1rem; padding-left: 1rem; padding-right: 1rem; border-radius: var(--r-lg); }
+  .section { padding: 1.75rem 1.25rem; margin-top: 1rem; border-radius: var(--r-lg); }
   .section__title { font-size: 1.2rem; }
   h1.section__title { font-size: 1.5rem; }
-  .kabel-section { margin-left: -1rem; margin-right: -1rem; padding-left: 1rem; padding-right: 1rem; }
   .kabel-hero .section__title { font-size: 1.3rem; }
 
   /* Grids → single column */
