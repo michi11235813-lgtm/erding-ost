@@ -11,7 +11,7 @@ const currentNews = [
   {
     title: "Einladung Jahreshauptversammlung 2026",
     date: "15. April 2026",
-    text: "Am 15.04.2026 findet die nächste JHV statt. Alle Mitglieder sind herzlich eingeladen.",
+    text: "Am 15. April 2026 findet die nächste Jahreshauptversammlung statt. Alle Mitglieder sind herzlich eingeladen.",
     href: "/dokumente/Einladung_JHV_2026.pdf",
     cta: "Einladung herunterladen",
     color: "badge"
@@ -27,7 +27,7 @@ const currentNews = [
   {
     title: "Grüngut-Container 2025",
     date: "24.–26. Okt. 2025",
-    text: "Rückblick auf die diesjährige Grüncontainer-Aktion.",
+    text: "Grünschnitt konnte an drei Tagen kostenlos entsorgt werden.",
     href: "#",
     cta: "Mehr erfahren",
     color: "badge"
@@ -203,9 +203,8 @@ export default function HomePage() {
               <span className="hero__badge">Seit 1974</span>
               <h1>Siedlungsverein Erding-Ost e.V.</h1>
               <p className="hero__sub">
-                134 Einfamilienhäuser, eine Gemeinschaft. Wir kümmern uns um
-                Kabelanlage, Gemeinschaftsflächen und das Erscheinungsbild unserer
-                Siedlung.
+                134 Reihenhäuser, eine Gemeinschaft – wir verwalten Kabelanlage,
+                Gemeinschaftsflächen und Siedlungsbild im Osten von Erding.
               </p>
               <div className="hero__actions">
                 <a href="#aktuelles" className="btn btn--white">Aktuelle Meldungen</a>
@@ -219,7 +218,7 @@ export default function HomePage() {
         <section id="aktuelles" className="section">
           <div className="section__header">
             <h2 className="section__title">Aktuelles</h2>
-            <p className="section__desc">Neuigkeiten, Termine und Informationen aus dem Vereinsleben</p>
+            <p className="section__desc">Termine, Beschlüsse und Hinweise für Vereinsmitglieder</p>
           </div>
           <div className="news-grid">
             {currentNews.map((n) => (
@@ -252,7 +251,7 @@ export default function HomePage() {
         <section id="siedlung" className="section section--alt">
           <div className="section__header">
             <h2 className="section__title">Die Siedlung</h2>
-            <p className="section__desc">134 Einfamilienhäuser in Erding-Ost</p>
+            <p className="section__desc">Reihenhaussiedlung zwischen B388 und Stadtpark</p>
           </div>
           <div className="siedlung-layout">
             <div className="siedlung-img">
@@ -260,21 +259,20 @@ export default function HomePage() {
             </div>
             <div className="siedlung-cards">
               <article className="info-card">
-                <div className="info-card__icon info-card__icon--red">🏘️</div>
+                <div className="info-card__icon">🏘️</div>
                 <h3>Lage &amp; Aufbau</h3>
                 <p>
-                  Die Reihenhaussiedlung liegt im Osten von Erding entlang der
-                  Hans-Schmidmayer-Straße, Dr.-Lehmer-Straße, Dr.-Deißböck-Weg
-                  und Wilhelm-von-Diez-Straße.
+                  134 Reihenhäuser entlang der Hans-Schmidmayer-Straße,
+                  Dr.-Lehmer-Straße, Dr.-Deißböck-Weg und Wilhelm-von-Diez-Straße.
                 </p>
               </article>
               <article className="info-card">
-                <div className="info-card__icon info-card__icon--teal">🅿️</div>
+                <div className="info-card__icon">🅿️</div>
                 <h3>Garagen</h3>
                 <p>
-                  Die Garagenplatzzuordnungen zu den einzelnen Wohneinheiten liegen
-                  im Stand 12/2009 vor. Bei Reparaturfällen kann der
-                  Eigentümer ermittelt werden – Anfragen an den Vorstand.
+                  Zuordnung der Garagenplätze zu den Wohneinheiten liegt beim
+                  Vorstand vor (Stand 12/2009). Bei Fragen oder Reparaturbedarf
+                  bitte direkt melden.
                 </p>
               </article>
             </div>
@@ -285,11 +283,11 @@ export default function HomePage() {
         <section id="verein" className="section">
           <div className="section__header">
             <h2 className="section__title">Der Verein</h2>
-            <p className="section__desc">Gegründet 1974 – um sich eine professionelle Hausverwaltung zu (er-)sparen</p>
+            <p className="section__desc">Gegründet 1974 zur gemeinschaftlichen Selbstverwaltung der Siedlung</p>
           </div>
           <div className="info-grid">
             <article className="info-card">
-              <div className="info-card__icon info-card__icon--red">📌</div>
+              <div className="info-card__icon">📌</div>
               <h3>Zweck des Vereins</h3>
               <p>
                 Verwaltung der vereinseigenen Rundfunkkabelanlage, Wahrung des
@@ -298,7 +296,7 @@ export default function HomePage() {
               </p>
             </article>
             <article className="info-card">
-              <div className="info-card__icon info-card__icon--teal">💶</div>
+              <div className="info-card__icon">💶</div>
               <h3>Beiträge</h3>
               <p>
                 Vereinsbeitrag: 16 € / Jahr. Kabelanlage (Wartung + Rücklagen):
@@ -306,7 +304,7 @@ export default function HomePage() {
               </p>
             </article>
             <article className="info-card">
-              <div className="info-card__icon info-card__icon--gray">📄</div>
+              <div className="info-card__icon">📄</div>
               <h3>Satzung &amp; Geschäftsordnung</h3>
               <p>
                 Details sind in der Satzung und der Geschäftsordnung festgelegt.
@@ -321,7 +319,7 @@ export default function HomePage() {
         <section id="vorstand" className="section section--alt">
           <div className="section__header">
             <h2 className="section__title">Vorstand</h2>
-            <p className="section__desc">Gewählt auf der Jahreshauptversammlung</p>
+            <p className="section__desc">Gewählt auf der jährlichen Hauptversammlung</p>
           </div>
           <div className="board-grid">
             {boardMembers.map((m) => (
@@ -365,30 +363,30 @@ export default function HomePage() {
         <section id="kabel" className="section kabel-section">
           <div className="kabel-hero">
             <div className="section__header">
-              <h2 className="section__title">📡 Kabelanlage</h2>
-              <p className="section__desc">Vereinseigene SAT-Kabelanlage mit Kopfstelle in der Hans-Schmidmayer-Str. 52 · Wartungsbeitrag 24 € / Jahr</p>
+              <h2 className="section__title">Kabelanlage</h2>
+              <p className="section__desc">Vereinseigene SAT-Anlage · Kopfstelle Hans-Schmidmayer-Str. 52 · Wartungsbeitrag 24 €/Jahr</p>
             </div>
           </div>
 
           <div className="info-grid">
             <article className="info-card">
-              <div className="info-card__icon info-card__icon--red">📺</div>
+              <div className="info-card__icon">📺</div>
               <h3>Digitales Fernsehen</h3>
               <p>
-                Der übliche Sendersuchlauf sollte für die Sendereinstellungen ausreichen.
-                Die ASTRA Transponder werden auf unsere Kabelkanäle umgesetzt.
+                Die ASTRA-Transponder werden auf unsere Kabelfrequenzen umgesetzt –
+                ein normaler Sendersuchlauf reicht zur Einrichtung.
               </p>
               <a className="info-card__link" href="/dokumente/senderliste2025.pdf" target="_blank" rel="noreferrer">
                 Transponderliste 2025
               </a>
             </article>
             <article className="info-card">
-              <div className="info-card__icon info-card__icon--blue">🔧</div>
+              <div className="info-card__icon">🔧</div>
               <h3>Service &amp; Störungen</h3>
               <p>
-                Service-Partner: Sempt-EW. Im Störungsfall bitte erst prüfen, ob das
-                Problem am eigenen Gerät liegt, und ggf. Nachbarn fragen. Bei
-                allgemeinen Störungen:
+                Service-Partner: Sempt-EW. Bitte zuerst prüfen, ob das Problem
+                am eigenen Gerät liegt, und ggf. die Nachbarn fragen.
+                Bei allgemeinen Störungen:
               </p>
               <p style={{ marginTop: ".4rem", fontWeight: 600, color: "var(--c-gray-900)" }}>
                 Tel: (08122) 9827-21<br />
@@ -404,7 +402,7 @@ export default function HomePage() {
           {/* Verstärkerstandorte */}
           <div className="section__header" style={{ marginTop: "2rem" }}>
             <h2 className="section__title">Verstärkerstandorte</h2>
-            <p className="section__desc">In diesen Häusern befinden sich die Kabelverstärker für die jeweilige Hauszeile</p>
+            <p className="section__desc">Standorte der Kabelverstärker je Hauszeile</p>
           </div>
           <div className="amp-map-wrap">
             <AmpMapWrapper />
@@ -441,7 +439,7 @@ export default function HomePage() {
         <section id="dokumente" className="section section--alt">
           <div className="section__header">
             <h2 className="section__title">Dokumente &amp; Formulare</h2>
-            <p className="section__desc">Alle wichtigen Unterlagen zum Herunterladen</p>
+            <p className="section__desc">Satzung, Formulare und weitere Unterlagen als PDF</p>
           </div>
           <div className="doc-grid">
             {documents.map((d) => (
@@ -489,8 +487,8 @@ export default function HomePage() {
           {/* Lärmschutzwall B388 */}
           <h3 className="subsection__title" style={{ marginTop: "2rem" }}>Lärmschutzwall B388</h3>
           <p className="section__desc">
-            Seit über 2 Jahrzehnten setzen wir uns für Lärmschutz an der B388 ein.
-            2011 wurde ein Flüsterbelag aufgetragen – weiter halten wir an aktivem Lärmschutz fest.
+            Seit über zwei Jahrzehnten setzen wir uns für Lärmschutz an der B388 ein.
+            2011 wurde ein Flüsterbelag aufgebracht – das Engagement geht weiter.
           </p>
           <div className="timeline">
             {pressArticles.map((a) => (
@@ -518,17 +516,17 @@ export default function HomePage() {
         <section id="kontakt" className="section">
           <div className="section__header">
             <h2 className="section__title">Kontakt</h2>
-            <p className="section__desc">So erreichen Sie uns</p>
+            <p className="section__desc">Fragen, Anregungen oder Störungsmeldungen</p>
           </div>
           <div className="contact-grid">
             <a className="contact-card" href="mailto:vorstand@erding-ost.de">
-              <div className="contact-card__icon">👤</div>
+              <div className="contact-card__icon">✉️</div>
               <div className="contact-card__role">1. Vorsitzender</div>
               <div className="contact-card__name">Thomas Feldt</div>
               <div className="contact-card__email">vorstand@erding-ost.de</div>
             </a>
             <a className="contact-card" href="mailto:webmaster@erding-ost.de">
-              <div className="contact-card__icon">🌐</div>
+              <div className="contact-card__icon">💻</div>
               <div className="contact-card__role">Webmaster</div>
               <div className="contact-card__name">Christian Sack</div>
               <div className="contact-card__email">webmaster@erding-ost.de</div>
