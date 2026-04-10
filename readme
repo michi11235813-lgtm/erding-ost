@@ -1,0 +1,8 @@
+
+die aktuelle erding-ost.de seite inhaltlich verwenden [erledigt]
+die seite auf ein "aktuelles" format bringen [erledigt]
+die neue seite soll eine reine frontweb app werden [erledigt]
+wir wollen vercel einsetzen und in nextjs codieren [erledigt]
+dns eintrag in strato auf vercel aendern [anleitung in docs/deployment.md]
+modus des aenderns / pushen einfach realisieren [erledigt: push->vercel auto deploy]
+
