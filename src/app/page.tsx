@@ -202,11 +202,11 @@ export default function HomePage() {
         <section className="hero">
           <div className="hero__inner">
             <div className="hero__logo">
-              <Image src="/logo.jpg" alt="Vereinslogo Siedlungsverein Erding-Ost" width={120} height={120} priority />
+              <Image src="/logo.jpg" alt="Vereinslogo Reihenhaussiedlung Erding-Ost" width={120} height={120} priority />
             </div>
             <div className="hero__text">
               <span className="hero__badge">Seit 1974</span>
-              <h1>Siedlungsverein Erding-Ost e.V.</h1>
+              <h1>Reihenhaussiedlung Erding-Ost e.V.</h1>
               <p className="hero__sub">
                 134 Reihenhäuser, eine Gemeinschaft – seit über 50 Jahren verwalten
                 wir gemeinsam Kabelanlage, Gemeinschaftsflächen und Siedlungsbild
@@ -566,14 +566,14 @@ export default function HomePage() {
         <div className="footer__inner container">
           <div className="footer__brand">
             <Image src="/logo.jpg" alt="Logo" width={28} height={28} />
-            <span>Siedlungsverein Erding-Ost e.V.</span>
+            <span>Reihenhaussiedlung Erding-Ost e.V.</span>
           </div>
           <div className="footer__links">
             <Link href="/impressum">Impressum</Link>
             <Link href="/datenschutz">Datenschutz</Link>
           </div>
           <p className="footer__copy">
-            © {new Date().getFullYear()} Siedlungsverein Erding-Ost e.V.
+            © {new Date().getFullYear()} Reihenhaussiedlung Erding-Ost e.V.
           </p>
         </div>
       </footer>

@@ -3,8 +3,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum | Siedlungsverein Erding-Ost e.V.",
-  description: "Impressum des Siedlungsverein Erding-Ost e.V. gemäß § 5 DDG",
+  title: "Impressum | Reihenhaussiedlung Erding-Ost e.V.",
+  description: "Impressum der Reihenhaussiedlung Erding-Ost e.V. gemäß § 5 DDG",
 };
 
 export default function ImpressumPage() {
@@ -33,7 +33,7 @@ export default function ImpressumPage() {
           <div className="info-card" style={{ maxWidth: 640 }}>
             <h2>Diensteanbieter</h2>
             <p style={{ marginTop: ".75rem" }}>
-              Siedlungsverein Erding-Ost e.V.<br />
+              Reihenhaussiedlung Erding-Ost e.V.<br />
               c/o Christian Sack<br />
               Dr.-Lehmer-Str. 52<br />
               D-85435 Erding
@@ -114,7 +114,7 @@ export default function ImpressumPage() {
       <footer className="footer">
         <div className="footer__inner container">
           <p className="footer__copy" style={{ width: "100%", textAlign: "center" }}>
-            &copy; {new Date().getFullYear()} Siedlungsverein Erding-Ost e.V.
+            &copy; {new Date().getFullYear()} Reihenhaussiedlung Erding-Ost e.V.
           </p>
         </div>
       </footer>

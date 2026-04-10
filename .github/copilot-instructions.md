@@ -2,7 +2,7 @@
 
 ## Overview
 
-Vereins-Website for **Siedlungsverein Erding-Ost e.V.** — a German residential association (134 houses in Erding). Single-page Next.js frontend deployed on Vercel. All content is in German (`lang="de"`).
+Vereins-Website for **Reihenhaussiedlung Erding-Ost e.V.** — a German residential association (134 houses in Erding). Single-page Next.js frontend deployed on Vercel. All content is in German (`lang="de"`).
 
 ## Tech Stack
 

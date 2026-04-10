@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Siedlungsverein Erding-Ost e.V.",
+  title: "Datenschutzerklärung | Reihenhaussiedlung Erding-Ost e.V.",
   description:
-    "Datenschutzerklärung gemäß Art. 13 DSGVO für die Website des Siedlungsverein Erding-Ost e.V.",
+    "Datenschutzerklärung gemäß Art. 13 DSGVO für die Website der Reihenhaussiedlung Erding-Ost e.V.",
 };
 
 export default function DatenschutzPage() {
@@ -34,7 +34,7 @@ export default function DatenschutzPage() {
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
             <h2>1. Verantwortlicher</h2>
             <p style={{ marginTop: ".75rem" }}>
-              Siedlungsverein Erding-Ost e.V.<br />
+              Reihenhaussiedlung Erding-Ost e.V.<br />
               c/o Christian Sack<br />
               Dr.-Lehmer-Str. 52<br />
               85435 Erding<br />
@@ -180,7 +180,7 @@ export default function DatenschutzPage() {
       <footer className="footer">
         <div className="footer__inner container">
           <p className="footer__copy" style={{ width: "100%", textAlign: "center" }}>
-            &copy; {new Date().getFullYear()} Siedlungsverein Erding-Ost e.V.
+            &copy; {new Date().getFullYear()} Reihenhaussiedlung Erding-Ost e.V.
           </p>
         </div>
       </footer>

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Siedlungsverein Erding-Ost e.V.";
+export const alt = "Reihenhaussiedlung Erding-Ost e.V.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -74,7 +74,7 @@ export default function OgImage() {
             maxWidth: 900,
           }}
         >
-          Siedlungsverein Erding-Ost e.V.
+          Reihenhaussiedlung Erding-Ost e.V.
         </div>
 
         {/* Subtitle */}
