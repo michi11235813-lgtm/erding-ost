@@ -510,7 +510,6 @@ export default function HomePage() {
             <span>Siedlungsverein Erding-Ost e.V.</span>
           </div>
           <div className="footer__links">
-            <a href="#kontakt">Kontakt</a>
             <Link href="/impressum">Impressum</Link>
             <Link href="/datenschutz">Datenschutz</Link>
           </div>
