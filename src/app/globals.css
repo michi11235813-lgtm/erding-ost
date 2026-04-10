@@ -85,6 +85,7 @@ img { display: block; max-width: 100%; }
 .section--alt { background: var(--c-primary-50); margin-left: -1.25rem; margin-right: -1.25rem; padding-left: 1.25rem; padding-right: 1.25rem; border-radius: var(--r-xl); box-shadow: 0 2px 8px rgba(74,66,64,.07); border: 1px solid var(--c-gray-200); }
 .section__header { margin-bottom: 1.25rem; }
 .section__title { font-size: 1.4rem; font-weight: 750; letter-spacing: -.015em; }
+h1.section__title { font-size: 1.8rem; }
 .section__desc { margin-top: .25rem; font-size: .92rem; color: var(--c-gray-600); }
 .subsection__title { font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: .75rem; color: var(--c-gray-700); border-bottom: 2px solid var(--c-primary); padding-bottom: .3rem; display: inline-block; }
 
@@ -247,6 +248,7 @@ img { display: block; max-width: 100%; }
   .section { padding: 2rem 0; }
   .section--alt { margin-left: -1rem; margin-right: -1rem; padding-left: 1rem; padding-right: 1rem; border-radius: var(--r-lg); }
   .section__title { font-size: 1.2rem; }
+  h1.section__title { font-size: 1.5rem; }
   .kabel-section { margin-left: -1rem; margin-right: -1rem; padding-left: 1rem; padding-right: 1rem; }
   .kabel-hero .section__title { font-size: 1.3rem; }
 
@@ -280,6 +282,7 @@ img { display: block; max-width: 100%; }
   .hero__sub { font-size: .85rem; }
   .btn { padding: .55rem 1rem; font-size: .82rem; }
   .section__title { font-size: 1.1rem; }
+  h1.section__title { font-size: 1.3rem; }
   .news-card { padding: 1rem; }
   .info-card { padding: 1.15rem; }
   .board-card { padding: .85rem 1rem; }
