@@ -4,33 +4,33 @@ import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-/* ── Verstärker-Standorte mit Koordinaten ── */
+/* ── Verstärker-Standorte mit Koordinaten (OSM-Gebäudedaten) ── */
 const ampLocations: { street: string; nr: string; lat: number; lng: number }[] = [
-  // Hans-Schmidmayer-Str. (runs N→S, lon ≈ 11.9144)
-  { street: "Hans-Schmidmayer-Str.", nr: "6",  lat: 48.30045, lng: 11.91445 },
-  { street: "Hans-Schmidmayer-Str.", nr: "7",  lat: 48.30050, lng: 11.91435 },
-  { street: "Hans-Schmidmayer-Str.", nr: "17", lat: 48.30065, lng: 11.91435 },
-  { street: "Hans-Schmidmayer-Str.", nr: "22", lat: 48.30075, lng: 11.91445 },
-  { street: "Hans-Schmidmayer-Str.", nr: "38", lat: 48.30100, lng: 11.91445 },
-  { street: "Hans-Schmidmayer-Str.", nr: "52", lat: 48.30130, lng: 11.91445 },
-  { street: "Hans-Schmidmayer-Str.", nr: "58", lat: 48.30140, lng: 11.91445 },
-  { street: "Hans-Schmidmayer-Str.", nr: "84", lat: 48.30185, lng: 11.91445 },
-  { street: "Hans-Schmidmayer-Str.", nr: "96", lat: 48.30210, lng: 11.91445 },
+  // Hans-Schmidmayer-Str.
+  { street: "Hans-Schmidmayer-Str.", nr: "6",  lat: 48.3004764, lng: 11.9146589 },
+  { street: "Hans-Schmidmayer-Str.", nr: "7",  lat: 48.3005501, lng: 11.9139772 },
+  { street: "Hans-Schmidmayer-Str.", nr: "17", lat: 48.3013575, lng: 11.9142491 },
+  { street: "Hans-Schmidmayer-Str.", nr: "22", lat: 48.3007099, lng: 11.9147529 },
+  { street: "Hans-Schmidmayer-Str.", nr: "38", lat: 48.3009558, lng: 11.9147160 },
+  { street: "Hans-Schmidmayer-Str.", nr: "52", lat: 48.3012178, lng: 11.9145771 },
+  { street: "Hans-Schmidmayer-Str.", nr: "58", lat: 48.3012118, lng: 11.9147914 },
+  { street: "Hans-Schmidmayer-Str.", nr: "84", lat: 48.3014563, lng: 11.9148924 },
+  { street: "Hans-Schmidmayer-Str.", nr: "96", lat: 48.3014268, lng: 11.9155137 },
 
-  // Dr.-Lehmer-Str. (runs N→S, lon ≈ 11.9130)
-  { street: "Dr.-Lehmer-Str.", nr: "15", lat: 48.30060, lng: 11.91300 },
-  { street: "Dr.-Lehmer-Str.", nr: "26", lat: 48.30075, lng: 11.91310 },
-  { street: "Dr.-Lehmer-Str.", nr: "31", lat: 48.30080, lng: 11.91300 },
-  { street: "Dr.-Lehmer-Str.", nr: "32", lat: 48.30085, lng: 11.91310 },
-  { street: "Dr.-Lehmer-Str.", nr: "40", lat: 48.30095, lng: 11.91310 },
-  { street: "Dr.-Lehmer-Str.", nr: "60", lat: 48.30125, lng: 11.91310 },
-  { street: "Dr.-Lehmer-Str.", nr: "76", lat: 48.30150, lng: 11.91300 },
+  // Dr.-Lehmer-Str.
+  { street: "Dr.-Lehmer-Str.", nr: "15", lat: 48.3011194, lng: 11.9128976 },
+  { street: "Dr.-Lehmer-Str.", nr: "26", lat: 48.3008009, lng: 11.9136157 },
+  { street: "Dr.-Lehmer-Str.", nr: "31", lat: 48.3018053, lng: 11.9128820 },
+  { street: "Dr.-Lehmer-Str.", nr: "32", lat: 48.3007998, lng: 11.9138775 },
+  { street: "Dr.-Lehmer-Str.", nr: "40", lat: 48.3010471, lng: 11.9136391 },
+  { street: "Dr.-Lehmer-Str.", nr: "60", lat: 48.3012895, lng: 11.9137451 },
+  { street: "Dr.-Lehmer-Str.", nr: "76", lat: 48.3015329, lng: 11.9139401 },
 
-  // Dr.-Deißböck-Weg (E-W, lat ≈ 48.3019)
-  { street: "Dr.-Deißböck-Weg", nr: "13", lat: 48.30190, lng: 11.91370 },
+  // Dr.-Deißböck-Weg
+  { street: "Dr.-Deißböck-Weg", nr: "13", lat: 48.3018316, lng: 11.9133896 },
 
-  // Wilhelm-von-Diez-Str. (E-W, lat ≈ 48.3005)
-  { street: "Wilhelm-von-Diez-Str.", nr: "24", lat: 48.30050, lng: 11.91100 },
+  // Wilhelm-von-Diez-Str.
+  { street: "Wilhelm-von-Diez-Str.", nr: "24", lat: 48.3001755, lng: 11.9140450 },
 ];
 
 /* red circle marker icon */
@@ -52,8 +52,8 @@ export default function AmpLeafletMap() {
     if (!mapRef.current || mapInstance.current) return;
 
     const map = L.map(mapRef.current, {
-      center: [48.3012, 11.9130],
-      zoom: 17,
+      center: [48.3010, 11.9140],
+      zoom: 18,
       scrollWheelZoom: false,
     });
 

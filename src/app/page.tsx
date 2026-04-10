@@ -381,14 +381,13 @@ export default function HomePage() {
           <div className="amp-map-wrap">
             <AmpMapWrapper />
           </div>
-          {Object.entries(amplifiers).map(([street, houses]) => (
-            <div className="amp-group" key={street}>
-              <div className="amp-group__title">{street}</div>
-              <ul className="amp-list">
-                {houses.map((h) => <li key={h}>{h}</li>)}
-              </ul>
-            </div>
-          ))}
+          <div className="amp-groups-compact">
+            {Object.entries(amplifiers).map(([street, houses]) => (
+              <p className="amp-compact" key={street}>
+                <strong>{street}:</strong> {houses.join(", ")}
+              </p>
+            ))}
+          </div>
 
           {/* UKW Radiosender */}
           <div className="section__header" style={{ marginTop: "2rem" }}>

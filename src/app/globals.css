@@ -137,11 +137,9 @@ img { display: block; max-width: 100%; }
 .radio-table tr:last-child td { border-bottom: none; }
 
 /* ── Amplifier list ── */
-.amp-group { margin-top: 1rem; }
-.amp-group__title { font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--c-gray-500); margin-bottom: .25rem; }
-.amp-list { columns: 2; column-gap: 1.5rem; list-style: none; margin-top: .5rem; }
-.amp-list li { padding: .3rem 0; font-size: .88rem; color: var(--c-gray-700); break-inside: avoid; }
-.amp-list li::before { content: "\2022"; color: var(--c-primary); margin-right: .4rem; font-weight: 700; }
+.amp-groups-compact { margin-top: .75rem; display: flex; flex-direction: column; gap: .3rem; }
+.amp-compact { font-size: .88rem; color: var(--c-gray-700); margin: 0; line-height: 1.5; }
+.amp-compact strong { color: var(--c-gray-600); }
 
 /* ── Timeline (Lärmschutzwall) ── */
 .timeline { display: flex; flex-direction: column; gap: .5rem; }
@@ -222,7 +220,6 @@ img { display: block; max-width: 100%; }
   .siedlung-layout { grid-template-columns: 1fr; }
   .footer__inner { flex-direction: column; align-items: center; text-align: center; }
   .footer__links { justify-content: center; }
-  .amp-list { columns: 1; }
 }
 @media (max-width: 480px) {
   .header__name { font-size: .82rem; }
