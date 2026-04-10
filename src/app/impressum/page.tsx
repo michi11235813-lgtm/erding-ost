@@ -68,8 +68,8 @@ export default function ImpressumPage() {
               {/* Registergericht: Amtsgericht Erding<br /> */}
               {/* Registernummer: VR XXXX */}
               Registereintrag wird auf Anfrage mitgeteilt. Bitte wenden Sie sich
-              per E-Mail an{" "}
-              <a href="mailto:webmaster@erding-ost.de">webmaster@erding-ost.de</a>.
+              an Thomas Feldt ({" "}
+              <a href="mailto:vorstand@erding-ost.de">vorstand@erding-ost.de</a>).
             </p>
           </div>
 

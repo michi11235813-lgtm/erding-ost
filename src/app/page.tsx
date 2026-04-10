@@ -72,7 +72,7 @@ const boardRevisoren = [
 
 const boardExtras = [
   { role: "Webadmin", name: "Christian Sack", addr: "Dr.-Lehmer-Str. 52" },
-  { role: "Kabelverantwortlicher", name: "Christian Sack", addr: "Dr.-Lehmer-Str. 52" }
+  { role: "Kabelverantwortlicher", name: "Christian Sack, Lothar Sack", addr: "Dr.-Lehmer-Str. 52" }
 ];
 
 const formerChairs = [
@@ -238,7 +238,7 @@ export default function HomePage() {
                 <h3>Garagen</h3>
                 <p>
                   Die Garagenplatzzuordnungen zu den einzelnen Wohneinheiten liegen
-                  im aktualisierten Stand 12/2009 vor. Bei Reparaturfällen kann der
+                  im Stand 12/2009 vor. Bei Reparaturfällen kann der
                   Eigentümer ermittelt werden – Anfragen an den Vorstand.
                 </p>
               </article>
