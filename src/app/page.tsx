@@ -171,6 +171,8 @@ const protokolle = [
 export default function HomePage() {
   return (
     <>
+      <a className="skip-link" href="#aktuelles">Zum Inhalt springen</a>
+
       {/* ── Header ── */}
       <header className="header">
         <div className="header__inner container">
@@ -178,7 +180,7 @@ export default function HomePage() {
             <Image src="/logo.jpg" alt="Logo" width={36} height={36} />
             <span className="header__name">Erding-Ost e.V.</span>
           </Link>
-          <nav className="header__nav">
+          <nav className="header__nav" aria-label="Hauptnavigation">
             <a href="#aktuelles">Aktuelles</a>
             <a href="#siedlung">Siedlung</a>
             <a href="#verein">Verein</a>
@@ -191,6 +193,7 @@ export default function HomePage() {
         </div>
       </header>
 
+      <main>
       <div className="container">
         {/* ── Hero ── */}
         <section className="hero">
@@ -254,7 +257,7 @@ export default function HomePage() {
             </div>
             <div className="siedlung-cards">
               <article className="info-card">
-                <div className="info-card__icon">🏘️</div>
+                <div className="info-card__icon" aria-hidden="true">🏘️</div>
                 <h3>Lage &amp; Aufbau</h3>
                 <p>
                   134 Reihenhäuser entlang der Hans-Schmidmayer-Straße,
@@ -262,7 +265,7 @@ export default function HomePage() {
                 </p>
               </article>
               <article className="info-card">
-                <div className="info-card__icon">🅿️</div>
+                <div className="info-card__icon" aria-hidden="true">🅿️</div>
                 <h3>Garagen</h3>
                 <p>
                   Zuordnung der Garagenplätze zu den Wohneinheiten liegt beim
@@ -282,7 +285,7 @@ export default function HomePage() {
           </div>
           <div className="info-grid">
             <article className="info-card">
-              <div className="info-card__icon">📌</div>
+              <div className="info-card__icon" aria-hidden="true">📌</div>
               <h3>Zweck des Vereins</h3>
               <p>
                 Verwaltung der vereinseigenen Rundfunkkabelanlage, Wahrung des
@@ -291,7 +294,7 @@ export default function HomePage() {
               </p>
             </article>
             <article className="info-card">
-              <div className="info-card__icon">💶</div>
+              <div className="info-card__icon" aria-hidden="true">💶</div>
               <h3>Beiträge</h3>
               <p>
                 Vereinsbeitrag: 16 € / Jahr. Kabelanlage (Wartung + Rücklagen):
@@ -299,7 +302,7 @@ export default function HomePage() {
               </p>
             </article>
             <article className="info-card">
-              <div className="info-card__icon">📄</div>
+              <div className="info-card__icon" aria-hidden="true">📄</div>
               <h3>Satzung &amp; Geschäftsordnung</h3>
               <p>
                 Details sind in der Satzung und der Geschäftsordnung festgelegt.
@@ -365,7 +368,7 @@ export default function HomePage() {
 
           <div className="info-grid">
             <article className="info-card">
-              <div className="info-card__icon">📺</div>
+              <div className="info-card__icon" aria-hidden="true">📺</div>
               <h3>Digitales Fernsehen</h3>
               <p>
                 Die ASTRA-Transponder werden auf unsere Kabelfrequenzen umgesetzt –
@@ -376,7 +379,7 @@ export default function HomePage() {
               </a>
             </article>
             <article className="info-card">
-              <div className="info-card__icon">🔧</div>
+              <div className="info-card__icon" aria-hidden="true">🔧</div>
               <h3>Unser Servicepartner</h3>
               <p>
                 Sempt-EW hat die SAT-Kabelanlage installiert und übernimmt weiterhin den technischen
@@ -444,7 +447,7 @@ export default function HomePage() {
           <div className="doc-grid">
             {documents.map((d) => (
               <a className="doc-item" key={d.title} href={d.href} target="_blank" rel="noreferrer">
-                <div className="doc-icon">📄</div>
+                <div className="doc-icon" aria-hidden="true">📄</div>
                 <div className="doc-item__text">
                   <div className="doc-item__title">{d.title}</div>
                   <div className="doc-item__meta">{d.meta}</div>
@@ -520,19 +523,19 @@ export default function HomePage() {
           </div>
           <div className="contact-grid">
             <a className="contact-card" href="mailto:vorstand@erding-ost.de">
-              <div className="contact-card__icon">✉️</div>
+              <div className="contact-card__icon" aria-hidden="true">✉️</div>
               <div className="contact-card__role">1. Vorsitzender</div>
               <div className="contact-card__name">Thomas Feldt</div>
               <div className="contact-card__email">vorstand@erding-ost.de</div>
             </a>
             <a className="contact-card" href="mailto:webmaster@erding-ost.de">
-              <div className="contact-card__icon">💻</div>
+              <div className="contact-card__icon" aria-hidden="true">💻</div>
               <div className="contact-card__role">Webmaster</div>
               <div className="contact-card__name">Christian Sack</div>
               <div className="contact-card__email">webmaster@erding-ost.de</div>
             </a>
             <a className="contact-card" href="https://chat.whatsapp.com/D4Z8zJNJzKR19uh0ZGAhsG" target="_blank" rel="noreferrer">
-              <div className="contact-card__icon">💬</div>
+              <div className="contact-card__icon" aria-hidden="true">💬</div>
               <div className="contact-card__role">WhatsApp Gruppe</div>
               <div className="contact-card__name">RHS Erding-Ost e.V.</div>
               <div className="contact-card__email">Beitreten →</div>
@@ -552,6 +555,7 @@ export default function HomePage() {
           </div>
         </section>
       </div>
+      </main>
 
       {/* ── Footer ── */}
       <footer className="footer">
