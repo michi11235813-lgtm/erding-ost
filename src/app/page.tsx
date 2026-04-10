@@ -84,6 +84,7 @@ const formerChairs = [
   "Adly Whaba (1998–2005)",
   "Christian Sack (2005–2008)",
   "Bernd Nitzschmann (2008–)",
+  "Hendrik Wanger",
   "Gustav Schultz"
 ];
 
