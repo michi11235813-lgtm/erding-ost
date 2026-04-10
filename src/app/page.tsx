@@ -4,12 +4,14 @@ import Link from "next/link";
 /* ════════════════════════════════════════════
    DATA – extracted from all erding-ost.de pages
    ════════════════════════════════════════════ */
-const news = [
+
+/* News: items younger than ~1 year appear in "Aktuelles", older ones in "Archiv" */
+const currentNews = [
   {
     title: "Einladung Jahreshauptversammlung 2026",
     date: "15. April 2026",
     text: "Am 15.04.2026 findet die nächste JHV statt. Alle Mitglieder sind herzlich eingeladen.",
-    href: "http://erding-ost.de/dokumente/Einladung_JHV_2026.pdf",
+    href: "/dokumente/Einladung_JHV_2026.pdf",
     cta: "Einladung herunterladen",
     color: "badge--red"
   },
@@ -17,17 +19,9 @@ const news = [
     title: "Protokoll der JHV 2025",
     date: "2025",
     text: "Das Protokoll der letzten Jahreshauptversammlung steht als PDF zum Download bereit.",
-    href: "http://erding-ost.de/dokumente/jhv-2025-protokoll.pdf",
+    href: "/dokumente/jhv-2025-protokoll.pdf",
     cta: "Protokoll öffnen",
     color: "badge--blue"
-  },
-  {
-    title: "ARD nur noch in HD",
-    date: "Seit Januar 2025",
-    text: "Die Programme der ARD laufen nur noch in HDTV. Informationen zur SD-Abschaltung im Kabelnetz.",
-    href: "http://erding-ost.de/dokumente/Abschaltung_SD_OEFF_RECHTL.pdf",
-    cta: "Hinweis lesen",
-    color: "badge--orange"
   },
   {
     title: "Grüngut-Container 2025",
@@ -36,6 +30,17 @@ const news = [
     href: "#",
     cta: "Mehr erfahren",
     color: "badge--teal"
+  }
+];
+
+const archiveNews = [
+  {
+    title: "ARD nur noch in HD",
+    date: "Seit Januar 2025",
+    text: "Die Programme der ARD laufen nur noch in HDTV. Informationen zur SD-Abschaltung im Kabelnetz.",
+    href: "/dokumente/Abschaltung_SD_OEFF_RECHTL.pdf",
+    cta: "Hinweis lesen",
+    color: "badge--orange"
   },
   {
     title: "Garagenplatzzuordnungen",
@@ -64,6 +69,11 @@ const boardRevisoren = [
   { name: "Christian Speiseder", addr: "Dr.-Lehmer-Str. 15" }
 ];
 
+const boardExtras = [
+  { role: "Webadmin", name: "Christian Sack", addr: "Dr.-Lehmer-Str. 52" },
+  { role: "Kabelverantwortlicher", name: "Christian Sack", addr: "Dr.-Lehmer-Str. 52" }
+];
+
 const formerChairs = [
   "Willibald Beitel (1976–198x)",
   "Lothar Sack",
@@ -75,15 +85,15 @@ const formerChairs = [
 ];
 
 const documents = [
-  { title: "Satzung", meta: "PDF, 18 KB", href: "https://erding-ost.de/dokumente/satzung.pdf" },
-  { title: "Geschäftsordnung", meta: "PDF, 9 KB", href: "https://erding-ost.de/dokumente/geschaeftsordnung.pdf" },
-  { title: "Beitrittserklärung", meta: "PDF, 45 KB", href: "https://erding-ost.de/dokumente/Beitrittserkl%C3%A4rung%20Verein.pdf" },
-  { title: "Hauslärmverordnung Erding", meta: "PDF, 78 KB", href: "https://erding-ost.de/dokumente/hauslaermverordnung.pdf" },
-  { title: "Einzugsermächtigung Kabel", meta: "PDF, 60 KB", href: "https://erding-ost.de/dokumente/einzug-kabel.pdf" },
-  { title: "Einzugsermächtigung Vereinsbeitrag", meta: "PDF, 60 KB", href: "https://erding-ost.de/dokumente/einzug-vereinsbeitrag.pdf" },
-  { title: "Änderung der Bankverbindung", meta: "PDF, 45 KB", href: "https://erding-ost.de/dokumente/%C3%84nderung%20der%20Bankverbindung.pdf" },
-  { title: "Erstattung von Sachauslagen", meta: "PDF, 5 KB", href: "https://erding-ost.de/dokumente/erstattung-sachauslagen.pdf" },
-  { title: "Transponderliste (Senderliste 2025)", meta: "PDF", href: "https://erding-ost.de/dokumente/senderliste2025.pdf" }
+  { title: "Satzung", meta: "PDF, 18 KB", href: "/dokumente/satzung.pdf" },
+  { title: "Geschäftsordnung", meta: "PDF, 9 KB", href: "/dokumente/geschaeftsordnung.pdf" },
+  { title: "Beitrittserklärung", meta: "PDF, 45 KB", href: "/dokumente/Beitrittserklärung Verein.pdf" },
+  { title: "Hauslärmverordnung Erding", meta: "PDF, 78 KB", href: "/dokumente/hauslaermverordnung.pdf" },
+  { title: "Einzugsermächtigung Kabel", meta: "PDF, 60 KB", href: "/dokumente/einzug-kabel.pdf" },
+  { title: "Einzugsermächtigung Vereinsbeitrag", meta: "PDF, 60 KB", href: "/dokumente/einzug-vereinsbeitrag.pdf" },
+  { title: "Änderung der Bankverbindung", meta: "PDF, 45 KB", href: "/dokumente/Änderung der Bankverbindung.pdf" },
+  { title: "Erstattung von Sachauslagen", meta: "PDF, 5 KB", href: "/dokumente/erstattung-sachauslagen.pdf" },
+  { title: "Transponderliste (Senderliste 2025)", meta: "PDF", href: "/dokumente/senderliste2025.pdf" }
 ];
 
 const radioStations = [
@@ -113,12 +123,12 @@ const amplifiers = {
 };
 
 const pressArticles = [
-  { title: 'Protest der B388 Anwohner: \u201EWir wollen endlich gesch\u00FCtzt werden\u201C', source: "Erdinger Anzeiger, 28.02.2009", href: "https://erding-ost.de/dokumente/mm-2009-02-09.pdf" },
-  { title: "Lärmschutzwall für Siedlung Erding-Ost gefordert", source: "Erdinger Nachrichten, 28.02.2009", href: "https://erding-ost.de/dokumente/sz-2009-02-28.pdf" },
-  { title: "Lärm \u2013 Bürger im Osten haben die Nase voll", source: "Hallo, 04.03.2009", href: "https://erding-ost.de/dokumente/hallo-2009-03-04-teil1.pdf" },
-  { title: "Stellungnahme / Ablehnung Bayer. Landtag", source: "05.02.2009", href: "https://erding-ost.de/dokumente/2009-02-05-Ablehnung.pdf" },
-  { title: "Schurer kämpft weiter", source: "Erdinger Anzeiger, 08.05.2009", href: "https://erding-ost.de/dokumente/08-05-2009-mm.pdf" },
-  { title: "Landtag verweigert Unterstützung für Lärmschutzwand", source: "Erdinger Nachrichten, 14.05.2009", href: "https://erding-ost.de/dokumente/2009-05-14-sz.pdf" }
+  { title: 'Protest der B388 Anwohner: \u201EWir wollen endlich gesch\u00FCtzt werden\u201C', source: "Erdinger Anzeiger, 28.02.2009", href: "/dokumente/mm-2009-02-09.pdf" },
+  { title: "Lärmschutzwall für Siedlung Erding-Ost gefordert", source: "Erdinger Nachrichten, 28.02.2009", href: "/dokumente/sz-2009-02-28.pdf" },
+  { title: "Lärm \u2013 Bürger im Osten haben die Nase voll", source: "Hallo, 04.03.2009", href: "/dokumente/hallo-2009-03-04-teil1.pdf" },
+  { title: "Stellungnahme / Ablehnung Bayer. Landtag", source: "05.02.2009", href: "/dokumente/2009-02-05-Ablehnung.pdf" },
+  { title: "Schurer kämpft weiter", source: "Erdinger Anzeiger, 08.05.2009", href: "/dokumente/08-05-2009-mm.pdf" },
+  { title: "Landtag verweigert Unterstützung für Lärmschutzwand", source: "Erdinger Nachrichten, 14.05.2009", href: "/dokumente/2009-05-14-sz.pdf" }
 ];
 
 const sommerfeste = [2000,2001,2002,2003,2004,2005,2008,2009,2010,2011];
@@ -144,6 +154,7 @@ export default function HomePage() {
             <a href="#verein">Verein</a>
             <a href="#kabel">Kabelanlage</a>
             <a href="#dokumente">Dokumente</a>
+            <a href="#rueckblicke">Rückblicke</a>
             <a href="#laermschutz">Lärm</a>
             <a href="mailto:webmaster@erding-ost.de">Kontakt</a>
           </nav>
@@ -175,7 +186,7 @@ export default function HomePage() {
             <p className="section__desc">Neuigkeiten, Termine und Informationen aus dem Vereinsleben</p>
           </div>
           <div className="news-grid">
-            {news.map((n) => (
+            {currentNews.map((n) => (
               <article className="news-card" key={n.title}>
                 <span className={`badge ${n.color}`}>{n.date}</span>
                 <h3>{n.title}</h3>
@@ -184,6 +195,21 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+
+          {/* Ältere Meldungen */}
+          <details className="archive-section">
+            <summary className="archive-section__summary">Ältere Meldungen anzeigen</summary>
+            <div className="news-grid" style={{ marginTop: "1rem" }}>
+              {archiveNews.map((n) => (
+                <article className="news-card news-card--archive" key={n.title}>
+                  <span className={`badge ${n.color}`}>{n.date}</span>
+                  <h3>{n.title}</h3>
+                  <p>{n.text}</p>
+                  <a className="card-cta" href={n.href} target="_blank" rel="noreferrer">{n.cta}</a>
+                </article>
+              ))}
+            </div>
+          </details>
         </section>
 
         {/* ── Siedlung ── */}
@@ -192,28 +218,30 @@ export default function HomePage() {
             <h2 className="section__title">Die Siedlung</h2>
             <p className="section__desc">134 Einfamilienhäuser in Erding-Ost</p>
           </div>
-          <div className="info-grid">
-            <article className="info-card">
-              <div className="info-card__icon info-card__icon--red">🏘️</div>
-              <h3>Lage &amp; Aufbau</h3>
-              <p>
-                Die Reihenhaussiedlung liegt im Osten von Erding entlang der
-                Hans-Schmidmayer-Straße, Dr.-Lehmer-Straße, Dr.-Deißböck-Weg
-                und Wilhelm-von-Diez-Straße.
-              </p>
-            </article>
-            <article className="info-card">
-              <div className="info-card__icon info-card__icon--teal">🅿️</div>
-              <h3>Garagen</h3>
-              <p>
-                Die Garagenplatzzuordnungen zu den einzelnen Wohneinheiten liegen
-                im aktualisierten Stand 12/2009 vor. Bei Reparaturfällen kann der
-                Eigentümer ermittelt werden – Anfragen an den Vorstand.
-              </p>
-            </article>
-          </div>
-          <div className="siedlung-img">
-            <Image src="/lageplan.gif" alt="Lageplan der Siedlung Erding-Ost" width={800} height={600} style={{ width: "100%", height: "auto" }} />
+          <div className="siedlung-layout">
+            <div className="siedlung-img">
+              <Image src="/lageplan.gif" alt="Lageplan der Siedlung Erding-Ost" width={800} height={600} style={{ width: "100%", height: "auto" }} />
+            </div>
+            <div className="siedlung-cards">
+              <article className="info-card">
+                <div className="info-card__icon info-card__icon--red">🏘️</div>
+                <h3>Lage &amp; Aufbau</h3>
+                <p>
+                  Die Reihenhaussiedlung liegt im Osten von Erding entlang der
+                  Hans-Schmidmayer-Straße, Dr.-Lehmer-Straße, Dr.-Deißböck-Weg
+                  und Wilhelm-von-Diez-Straße.
+                </p>
+              </article>
+              <article className="info-card">
+                <div className="info-card__icon info-card__icon--teal">🅿️</div>
+                <h3>Garagen</h3>
+                <p>
+                  Die Garagenplatzzuordnungen zu den einzelnen Wohneinheiten liegen
+                  im aktualisierten Stand 12/2009 vor. Bei Reparaturfällen kann der
+                  Eigentümer ermittelt werden – Anfragen an den Vorstand.
+                </p>
+              </article>
+            </div>
           </div>
         </section>
 
@@ -238,7 +266,7 @@ export default function HomePage() {
               <h3>Beiträge</h3>
               <p>
                 Vereinsbeitrag: 16 € / Jahr. Kabelanlage (Wartung + Rücklagen):
-                90 € / Jahr. Beides wird regelmäßig im April abgebucht.
+                24 € / Jahr. Beides wird regelmäßig im April abgebucht.
               </p>
             </article>
             <article className="info-card">
@@ -266,18 +294,28 @@ export default function HomePage() {
             ))}
           </div>
 
+          {/* Beiräte – zusammengefasst */}
           <div className="board-grid" style={{ marginTop: ".75rem" }}>
-            {boardBeirate.map((name) => (
-              <div className="board-card" key={name}>
-                <div className="board-card__role">Verwaltungsbeirat</div>
-                <div className="board-card__name">{name}</div>
+            <div className="board-card board-card--group">
+              <div className="board-card__role">Verwaltungsbeiräte</div>
+              <div className="board-card__names">
+                {boardBeirate.map((name) => (
+                  <span key={name}>{name}</span>
+                ))}
               </div>
-            ))}
+            </div>
             {boardRevisoren.map((r) => (
               <div className="board-card" key={r.name}>
                 <div className="board-card__role">Revisor</div>
                 <div className="board-card__name">{r.name}</div>
                 <div className="board-card__addr">{r.addr}</div>
+              </div>
+            ))}
+            {boardExtras.map((e) => (
+              <div className="board-card" key={e.role}>
+                <div className="board-card__role">{e.role}</div>
+                <div className="board-card__name">{e.name}</div>
+                <div className="board-card__addr">{e.addr}</div>
               </div>
             ))}
           </div>
@@ -299,7 +337,7 @@ export default function HomePage() {
           <div className="kabel-hero">
             <div className="section__header">
               <h2 className="section__title">📡 Kabelanlage</h2>
-              <p className="section__desc">Vereinseigene SAT-Kabelanlage mit Kopfstelle in der Hans-Schmidmayer-Str. 52 · Wartungsbeitrag 90 € / Jahr</p>
+              <p className="section__desc">Vereinseigene SAT-Kabelanlage mit Kopfstelle in der Hans-Schmidmayer-Str. 52 · Wartungsbeitrag 24 € / Jahr</p>
             </div>
           </div>
 
@@ -311,7 +349,7 @@ export default function HomePage() {
                 Der übliche Sendersuchlauf sollte für die Sendereinstellungen ausreichen.
                 Die ASTRA Transponder werden auf unsere Kabelkanäle umgesetzt.
               </p>
-              <a className="info-card__link" href="https://erding-ost.de/dokumente/senderliste2025.pdf" target="_blank" rel="noreferrer">
+              <a className="info-card__link" href="/dokumente/senderliste2025.pdf" target="_blank" rel="noreferrer">
                 Transponderliste 2025
               </a>
             </article>
@@ -358,6 +396,21 @@ export default function HomePage() {
             <h2 className="section__title">Verstärkerstandorte</h2>
             <p className="section__desc">In diesen Häusern befinden sich die Kabelverstärker für die jeweilige Hauszeile</p>
           </div>
+          <div className="amp-map-wrap">
+            <iframe
+              title="Verstärkerstandorte Erding-Ost"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=11.8975%2C48.2990%2C11.9100%2C48.3040&layer=mapnik"
+              width="100%"
+              height="350"
+              style={{ border: 0, display: "block" }}
+              loading="lazy"
+            />
+            <p className="amp-map-caption">
+              <a href="https://www.openstreetmap.org/#map=17/48.3015/11.9038" target="_blank" rel="noreferrer">
+                Größere Karte anzeigen
+              </a>
+            </p>
+          </div>
           {Object.entries(amplifiers).map(([street, houses]) => (
             <div className="amp-group" key={street}>
               <div className="amp-group__title">{street}</div>
@@ -393,9 +446,24 @@ export default function HomePage() {
           </div>
           <div className="retro-grid">
             {protokolle.map((year) => (
-              <a className="retro-chip" key={year} href={`https://erding-ost.de/protokolle.htm`} target="_blank" rel="noreferrer">
+              <span className="retro-chip" key={year}>
                 JHV {year}
-              </a>
+              </span>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Rückblicke / Sommerfeste ── */}
+        <section id="rueckblicke" className="section">
+          <div className="section__header">
+            <h2 className="section__title">Rückblicke</h2>
+            <p className="section__desc">Sommerfeste und Veranstaltungen im Laufe der Jahre</p>
+          </div>
+          <div className="retro-grid">
+            {sommerfeste.map((year) => (
+              <Link className="retro-chip" key={year} href={`/sommerfest/${year}`}>
+                Sommerfest {year}
+              </Link>
             ))}
           </div>
         </section>
@@ -421,21 +489,6 @@ export default function HomePage() {
             ))}
           </div>
         </section>
-
-        {/* ── Rückblicke / Sommerfeste ── */}
-        <section className="section">
-          <div className="section__header">
-            <h2 className="section__title">Rückblicke</h2>
-            <p className="section__desc">Sommerfeste und Veranstaltungen im Laufe der Jahre</p>
-          </div>
-          <div className="retro-grid">
-            {sommerfeste.map((year) => (
-              <a className="retro-chip" key={year} href={`https://erding-ost.de/somerfest${year}.htm`} target="_blank" rel="noreferrer">
-                Sommerfest {year}
-              </a>
-            ))}
-          </div>
-        </section>
       </div>
 
       {/* ── Footer ── */}
@@ -454,7 +507,7 @@ export default function HomePage() {
           </div>
           <div className="footer__links">
             <a href="mailto:webmaster@erding-ost.de">webmaster@erding-ost.de</a>
-            <a href="https://erding-ost.de/impressum.htm" target="_blank" rel="noreferrer">Impressum</a>
+            <Link href="/impressum">Impressum</Link>
             <a href="#verein">Satzung</a>
           </div>
           <p className="footer__copy">
