@@ -72,7 +72,8 @@ const boardRevisoren = [
 
 const boardExtras = [
   { role: "Webadmin", name: "Christian Sack", addr: "Dr.-Lehmer-Str. 52" },
-  { role: "Kabelverantwortlicher", name: "Christian Sack, Lothar Sack", addr: "Dr.-Lehmer-Str. 52" }
+  { role: "Kabelverantwortlicher", name: "Christian Sack", addr: "Dr.-Lehmer-Str. 52" },
+  { role: "Kabelverantwortlicher", name: "Lothar Sack", addr: "Dr.-Lehmer-Str. 62" }
 ];
 
 const formerChairs = [
@@ -347,8 +348,8 @@ export default function HomePage() {
                 <div className="board-card__addr">{r.addr}</div>
               </div>
             ))}
-            {boardExtras.map((e) => (
-              <div className="board-card" key={e.role}>
+            {boardExtras.map((e, i) => (
+              <div className="board-card" key={`${e.role}-${i}`}>
                 <div className="board-card__role">{e.role}</div>
                 <div className="board-card__name">{e.name}</div>
                 <div className="board-card__addr">{e.addr}</div>
