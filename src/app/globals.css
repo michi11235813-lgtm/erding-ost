@@ -2,19 +2,19 @@
    Erding-Ost Design System
    ══════════════════════════════════════════════ */
 :root {
-  --c-bg: #faf8f8;
+  --c-bg: #ffffff;
   --c-white: #ffffff;
-  --c-gray-100: #f5f2f2;
-  --c-gray-200: #ebe7e7;
-  --c-gray-300: #ddd8d8;
-  --c-gray-500: #b0a8a8;
-  --c-gray-600: #8a8080;
-  --c-gray-700: #524848;
-  --c-gray-900: #2a2020;
+  --c-gray-100: #f5f2f0;
+  --c-gray-200: #e8e4e1;
+  --c-gray-300: #dbd6d3;
+  --c-gray-500: #a89e9a;
+  --c-gray-600: #7d7370;
+  --c-gray-700: #4a4240;
+  --c-gray-900: #252020;
   --c-primary: #c92a2a;
   --c-primary-dark: #a11e1e;
   --c-primary-light: #ffe3e3;
-  --c-primary-50: #fff5f5;
+  --c-primary-50: #f0ebe4;
   --c-secondary: #862323;
   --c-secondary-light: #fde8e8;
   --c-teal: #087f5b;
@@ -82,7 +82,7 @@ img { display: block; max-width: 100%; }
 
 /* ── Section ── */
 .section { margin-top: 0; padding: 3rem 0; }
-.section--alt { background: var(--c-primary-50); margin-left: -1.25rem; margin-right: -1.25rem; padding-left: 1.25rem; padding-right: 1.25rem; border-radius: var(--r-xl); }
+.section--alt { background: var(--c-primary-50); margin-left: -1.25rem; margin-right: -1.25rem; padding-left: 1.25rem; padding-right: 1.25rem; border-radius: var(--r-xl); box-shadow: 0 2px 8px rgba(74,66,64,.07); border: 1px solid var(--c-gray-200); }
 .section__header { margin-bottom: 1.25rem; }
 .section__title { font-size: 1.4rem; font-weight: 750; letter-spacing: -.015em; }
 .section__desc { margin-top: .25rem; font-size: .92rem; color: var(--c-gray-600); }
@@ -199,7 +199,7 @@ img { display: block; max-width: 100%; }
 .amp-map-caption a:hover { text-decoration: underline; }
 
 /* ── Kabelanlage highlight ── */
-.kabel-section { background: var(--c-primary-50); margin-left: -1.25rem; margin-right: -1.25rem; padding: 3rem 1.25rem; border-radius: var(--r-xl); }
+.kabel-section { margin-left: -1.25rem; margin-right: -1.25rem; padding-left: 1.25rem; padding-right: 1.25rem; }
 .kabel-hero { margin-bottom: 1.25rem; }
 .kabel-hero .section__title { font-size: 1.6rem; }
 

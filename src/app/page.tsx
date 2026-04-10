@@ -153,6 +153,7 @@ export default function HomePage() {
             <a href="#aktuelles">Aktuelles</a>
             <a href="#siedlung">Siedlung</a>
             <a href="#verein">Verein</a>
+            <a href="#vorstand">Vorstand</a>
             <a href="#kabel">Kabelanlage</a>
             <a href="#dokumente">Dokumente</a>
             <a href="#rueckblicke">Rückblicke</a>
@@ -285,10 +286,13 @@ export default function HomePage() {
               <a className="info-card__link" href="#dokumente">Zu den Dokumenten</a>
             </article>
           </div>
+        </section>
 
-          {/* Vorstand */}
-          <div className="section__header" style={{ marginTop: "2.5rem" }}>
+        {/* ── Vorstand ── */}
+        <section id="vorstand" className="section section--alt">
+          <div className="section__header">
             <h2 className="section__title">Vorstand</h2>
+            <p className="section__desc">Gewählt auf der Jahreshauptversammlung</p>
           </div>
           <div className="board-grid">
             {boardMembers.map((m) => (
