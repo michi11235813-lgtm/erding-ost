@@ -186,7 +186,6 @@ export default function HomePage() {
             <a href="#kabel">Kabelanlage</a>
             <a href="#dokumente">Dokumente</a>
             <a href="#rueckblicke">Rückblicke</a>
-            <a href="#laermschutz">Lärm</a>
             <a href="#kontakt">Kontakt</a>
           </nav>
         </div>
@@ -197,7 +196,7 @@ export default function HomePage() {
         <section className="hero">
           <div className="hero__inner">
             <div className="hero__logo">
-              <Image src="/logo.jpg" alt="Vereinslogo Siedlungsverein Erding-Ost" width={160} height={160} priority />
+              <Image src="/logo.jpg" alt="Vereinslogo Siedlungsverein Erding-Ost" width={120} height={120} priority />
             </div>
             <div className="hero__text">
               <span className="hero__badge">Seit 1974</span>
@@ -206,10 +205,6 @@ export default function HomePage() {
                 134 Reihenhäuser, eine Gemeinschaft – wir verwalten Kabelanlage,
                 Gemeinschaftsflächen und Siedlungsbild im Osten von Erding.
               </p>
-              <div className="hero__actions">
-                <a href="#aktuelles" className="btn btn--white">Aktuelle Meldungen</a>
-                <a href="#kontakt" className="btn btn--ghost">Kontakt aufnehmen</a>
-              </div>
             </div>
           </div>
         </section>
@@ -509,7 +504,7 @@ export default function HomePage() {
         </section>
 
         {/* ── Kontakt ── */}
-        <section id="kontakt" className="section">
+        <section id="kontakt" className="section section--alt">
           <div className="section__header">
             <h2 className="section__title">Kontakt</h2>
             <p className="section__desc">Fragen, Anregungen oder Störungsmeldungen</p>
