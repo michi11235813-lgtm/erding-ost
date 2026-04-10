@@ -205,8 +205,9 @@ export default function HomePage() {
               <span className="hero__badge">Seit 1974</span>
               <h1>Siedlungsverein Erding-Ost e.V.</h1>
               <p className="hero__sub">
-                134 Reihenhäuser, eine Gemeinschaft – wir verwalten Kabelanlage,
-                Gemeinschaftsflächen und Siedlungsbild im Osten von Erding.
+                134 Reihenhäuser, eine Gemeinschaft – seit über 50 Jahren verwalten
+                wir gemeinsam Kabelanlage, Gemeinschaftsflächen und Siedlungsbild
+                zwischen B388 und Stadtpark im Osten von Erding.
               </p>
             </div>
           </div>
