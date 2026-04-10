@@ -330,16 +330,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Ehemalige Vorstände – eingeklappt */}
-          <details className="former-chairs">
-            <summary className="former-chairs__summary">Ehemalige Vorstände</summary>
-            <p className="section__desc" style={{ marginTop: ".5rem", marginBottom: ".75rem" }}>Ein besonderer Dank für die geleistete Arbeit</p>
-            <div className="retro-grid">
-              {formerChairs.map((c) => (
-                <span className="retro-chip" key={c}>{c}</span>
-              ))}
-            </div>
-          </details>
         </section>
 
         {/* ── Kabelanlage ── */}
@@ -450,12 +440,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Rückblicke / Sommerfeste ── */}
+        {/* ── Rückblicke ── */}
         <section id="rueckblicke" className="section">
           <div className="section__header">
             <h2 className="section__title">Rückblicke</h2>
-            <p className="section__desc">Sommerfeste und Veranstaltungen im Laufe der Jahre</p>
+            <p className="section__desc">Sommerfeste, Lärmschutz und Vereinsgeschichte</p>
           </div>
+
+          {/* Sommerfeste */}
+          <h3 className="subsection__title">Sommerfeste</h3>
           <div className="retro-grid">
             {sommerfeste.map((year) => (
               <Link className="retro-chip" key={year} href={`/sommerfest/${year}`}>
@@ -463,17 +456,13 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </section>
 
-        {/* ── Lärmschutzwall ── */}
-        <section id="laermschutz" className="section section--alt">
-          <div className="section__header">
-            <h2 className="section__title">Lärmschutzwall B388</h2>
-            <p className="section__desc">
-              Seit über 2 Jahrzehnten setzen wir uns für Lärmschutz an der B388 ein.
-              2011 wurde ein Flüsterbelag aufgetragen – weiter halten wir an aktivem Lärmschutz fest.
-            </p>
-          </div>
+          {/* Lärmschutzwall B388 */}
+          <h3 className="subsection__title" style={{ marginTop: "2rem" }}>Lärmschutzwall B388</h3>
+          <p className="section__desc">
+            Seit über 2 Jahrzehnten setzen wir uns für Lärmschutz an der B388 ein.
+            2011 wurde ein Flüsterbelag aufgetragen – weiter halten wir an aktivem Lärmschutz fest.
+          </p>
           <div className="timeline">
             {pressArticles.map((a) => (
               <a className="timeline-item" key={a.title} href={a.href} target="_blank" rel="noreferrer">
@@ -483,6 +472,15 @@ export default function HomePage() {
                   <div className="timeline-item__sub">{a.source}</div>
                 </div>
               </a>
+            ))}
+          </div>
+
+          {/* Ehemalige Vorstände */}
+          <h3 className="subsection__title" style={{ marginTop: "2rem" }}>Ehemalige Vorstände</h3>
+          <p className="section__desc">Ein besonderer Dank für die geleistete Arbeit</p>
+          <div className="retro-grid">
+            {formerChairs.map((c) => (
+              <span className="retro-chip" key={c}>{c}</span>
             ))}
           </div>
         </section>
