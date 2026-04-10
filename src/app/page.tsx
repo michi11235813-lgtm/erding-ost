@@ -180,7 +180,7 @@ export default function HomePage() {
         <div className="header__inner container">
           <Link href="/" className="header__brand">
             <Image src="/logo.jpg" alt="Logo" width={36} height={36} />
-            <span className="header__name">Erding-Ost e.V.</span>
+            <span className="header__name">RHS Erding-Ost e.V.</span>
           </Link>
           <nav className="header__nav" aria-label="Hauptnavigation">
             <a href="#aktuelles">Aktuelles</a>
