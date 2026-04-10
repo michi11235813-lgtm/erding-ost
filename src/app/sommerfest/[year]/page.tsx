@@ -45,7 +45,7 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
         <section className="section">
           <div className="section__header">
             <Link href="/#rueckblicke" className="back-link">&larr; Rückblicke</Link>
-            <h1 className="section__title" style={{ fontSize: "1.8rem", marginTop: ".5rem" }}>
+            <h1 className="section__title" style={{ marginTop: ".5rem" }}>
               Sommerfest {year}
             </h1>
           </div>
@@ -85,7 +85,7 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
       <footer className="footer">
         <div className="footer__inner container">
           <p className="footer__copy" style={{ width: "100%", textAlign: "center" }}>
-            &copy; {new Date().getFullYear()} Reihenhaussiedlung Erding-Ost e.V.
+            &copy; {new Date().getFullYear()} Siedlungsverein Erding-Ost e.V.
           </p>
         </div>
       </footer>

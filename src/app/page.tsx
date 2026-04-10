@@ -134,7 +134,36 @@ const pressArticles = [
 
 const sommerfeste = [2000,2001,2002,2003,2004,2005,2008,2009,2010,2011];
 
-const protokolle = [2024,2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001,2000];
+const protokolle = [
+  { year: 2025, href: "/dokumente/jhv-2025-protokoll.pdf" },
+  { year: 2024, href: "/dokumente/jhv-2024-protokoll.pdf" },
+  { year: 2023, href: "/dokumente/jhv-2023-protokoll.pdf" },
+  { year: 2022, href: "/dokumente/Protokoll_JHV_2022.pdf" },
+  { year: 2021, href: "/dokumente/Protokoll_JHV_2021.pdf" },
+  { year: 2020, href: "/dokumente/Protokoll_JHV_2020.pdf" },
+  { year: 2019, href: "/dokumente/jhv-2019-protokoll.pdf" },
+  { year: 2018, href: "/dokumente/jhv-2018-protokoll.pdf" },
+  { year: 2017, href: "/dokumente/jhv-2017-protokoll.pdf" },
+  { year: 2016, href: "/dokumente/jhv-2016-protokoll.pdf" },
+  { year: 2015, href: "/dokumente/jhv-2015-protokoll.pdf" },
+  { year: 2014, href: "/dokumente/jhv-2014-protokoll.pdf" },
+  { year: 2013, href: "/dokumente/jhv-2013-protokoll.pdf" },
+  { year: 2012, href: "/dokumente/jhv-2012-protokoll.pdf" },
+  { year: 2011, href: "/dokumente/jhv-2011-protokoll.pdf" },
+  { year: "a.o. 2010", label: "a.o. HV 2010", href: "/dokumente/a-hv-2010-protokoll.pdf" },
+  { year: 2010, href: "/dokumente/jhv-2010-protokoll.pdf" },
+  { year: 2009, href: "/dokumente/jhv-2009-protokoll.pdf" },
+  { year: 2008, href: "/dokumente/jhv-2008-protokoll.pdf" },
+  { year: 2007, href: "/dokumente/jhv-2007-protokoll.pdf" },
+  { year: 2006, href: "/dokumente/jhv-2006-protokoll.pdf" },
+  { year: "2005 (2.)", label: "JHV 2005 (2. Sitzung)", href: "/dokumente/jhv-2005-2-protokoll.pdf" },
+  { year: 2005, href: "/dokumente/jhv-2005-protokoll.pdf" },
+  { year: 2004, href: "/dokumente/jhv-2004-protokoll.pdf" },
+  { year: 2003, href: "/dokumente/jhv-2003-protokoll.pdf" },
+  { year: 2002, href: "/dokumente/jhv-2002-protokoll.pdf" },
+  { year: 2001, href: "/dokumente/jhv-2001-protokoll.pdf" },
+  { year: 2000, href: "/dokumente/jhv-2000-protokoll.pdf" },
+];
 
 /* ════════════════════════════════════════════
    PAGE COMPONENT
@@ -439,13 +468,13 @@ export default function HomePage() {
           {/* JHV-Protokolle */}
           <div className="section__header" style={{ marginTop: "2rem" }}>
             <h2 className="section__title">JHV-Protokolle</h2>
-            <p className="section__desc">Protokolle der Jahreshauptversammlungen 2000–2024</p>
+            <p className="section__desc">Protokolle der Jahreshauptversammlungen 2000–2025</p>
           </div>
           <div className="retro-grid">
-            {protokolle.map((year) => (
-              <span className="retro-chip" key={year}>
-                JHV {year}
-              </span>
+            {protokolle.map((p) => (
+              <a className="retro-chip" key={p.year} href={p.href} target="_blank" rel="noreferrer">
+                {p.label ?? `JHV ${p.year}`}
+              </a>
             ))}
           </div>
         </section>
