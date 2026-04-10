@@ -157,7 +157,7 @@ export default function HomePage() {
             <a href="#dokumente">Dokumente</a>
             <a href="#rueckblicke">Rückblicke</a>
             <a href="#laermschutz">Lärm</a>
-            <a href="mailto:webmaster@erding-ost.de">Kontakt</a>
+            <a href="#kontakt">Kontakt</a>
           </nav>
         </div>
       </header>
@@ -175,7 +175,7 @@ export default function HomePage() {
             </p>
             <div className="hero__actions">
               <a href="#aktuelles" className="btn btn--white">Aktuelle Meldungen</a>
-              <a href="mailto:webmaster@erding-ost.de" className="btn btn--ghost">Kontakt aufnehmen</a>
+              <a href="#kontakt" className="btn btn--ghost">Kontakt aufnehmen</a>
             </div>
           </div>
         </section>
@@ -478,6 +478,28 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+        {/* ── Kontakt ── */}
+        <section id="kontakt" className="section">
+          <div className="section__header">
+            <h2 className="section__title">Kontakt</h2>
+            <p className="section__desc">So erreichen Sie uns</p>
+          </div>
+          <div className="contact-grid">
+            <a className="contact-card" href="mailto:webmaster@erding-ost.de">
+              <div className="contact-card__icon">🌐</div>
+              <div className="contact-card__role">Webmaster</div>
+              <div className="contact-card__name">Christian Sack</div>
+              <div className="contact-card__email">webmaster@erding-ost.de</div>
+            </a>
+            <a className="contact-card" href="mailto:vorstand@erding-ost.de">
+              <div className="contact-card__icon">👤</div>
+              <div className="contact-card__role">1. Vorsitzender</div>
+              <div className="contact-card__name">Thomas Feldt</div>
+              <div className="contact-card__email">vorstand@erding-ost.de</div>
+            </a>
+          </div>
+        </section>
       </div>
 
       {/* ── Footer ── */}
@@ -488,7 +510,7 @@ export default function HomePage() {
             <span>Siedlungsverein Erding-Ost e.V.</span>
           </div>
           <div className="footer__links">
-            <a href="mailto:webmaster@erding-ost.de">Kontakt</a>
+            <a href="#kontakt">Kontakt</a>
             <Link href="/impressum">Impressum</Link>
             <Link href="/datenschutz">Datenschutz</Link>
           </div>

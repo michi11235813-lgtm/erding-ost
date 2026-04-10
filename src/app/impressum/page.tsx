@@ -78,8 +78,7 @@ export default function ImpressumPage() {
             <h2>Verantwortlicher für den Inhalt nach § 18 Abs. 2 MStV</h2>
             <p style={{ marginTop: ".75rem" }}>
               Thomas Feldt (1. Vorsitzender)<br />
-              c/o Siedlungsverein Erding-Ost e.V.<br />
-              Dr.-Lehmer-Str. 52<br />
+              Dr.-Lehmer-Str. 27<br />
               D-85435 Erding
             </p>
           </div>
