@@ -218,6 +218,57 @@ h1.section__title { font-size: 1.8rem; }
 .footer__links a:hover { color: var(--c-primary); }
 .footer__copy { width: 100%; text-align: center; font-size: .78rem; color: var(--c-gray-500); margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--c-gray-200); }
 
+/* ── Scroll Reveal Animations ── */
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes reveal-scale {
+  from { opacity: 0; transform: scale(.96) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Sections fade up on scroll */
+.section {
+  animation: reveal .6s ease both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 25%;
+}
+
+/* Cards stagger in */
+.news-card, .info-card, .board-card, .contact-card, .doc-item, .timeline-item, .retro-chip {
+  animation: reveal-scale .5s ease both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 20%;
+}
+
+/* Hero entrance (one-time, not scroll-linked) */
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(-20px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.hero { animation: hero-enter .7s ease-out both; }
+.hero__badge { animation: reveal .5s ease .2s both; }
+.hero h1 { animation: reveal .5s ease .3s both; }
+.hero__sub { animation: reveal .5s ease .4s both; }
+.hero__logo { animation: reveal-scale .6s ease .15s both; }
+
+/* Fallback: if animation-timeline unsupported, just show everything */
+@supports not (animation-timeline: view()) {
+  .section, .news-card, .info-card, .board-card, .contact-card, .doc-item, .timeline-item, .retro-chip {
+    animation: none;
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .container { padding: 0 1rem; }
