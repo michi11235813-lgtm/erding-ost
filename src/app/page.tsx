@@ -57,8 +57,8 @@ const archiveNews = [
 const boardMembers = [
   { role: "1. Vorsitzender", name: "Thomas Feldt", addr: "Dr.-Lehmer-Str. 27" },
   { role: "2. Vorsitzender", name: "Christoph Lotter" },
-  { role: "Kassier", name: "Viktoria Bartsch", addr: "Hans-Schmidmayer-Str. 52" },
-  { role: "Schriftführer", name: "Eva Döllel", addr: "Hans-Schmidmayer-Str. 17" }
+  { role: "Kassiererin", name: "Viktoria Bartsch", addr: "Hans-Schmidmayer-Str. 52" },
+  { role: "Schriftführerin", name: "Eva Döllel", addr: "Hans-Schmidmayer-Str. 17" }
 ];
 
 const boardBeirate = [
@@ -67,14 +67,13 @@ const boardBeirate = [
 ];
 
 const boardRevisoren = [
-  { name: "Magdalena Koschek", addr: "Hans-Schmidmayer-Str. 14" },
-  { name: "Christian Speiseder", addr: "Dr.-Lehmer-Str. 15" }
+  { role: "Revisorin", name: "Magdalena Koschek", addr: "Hans-Schmidmayer-Str. 14" },
+  { role: "Revisor", name: "Christian Speiseder", addr: "Dr.-Lehmer-Str. 15" }
 ];
 
 const boardExtras = [
   { role: "Webadmin", name: "Christian Sack", addr: "Dr.-Lehmer-Str. 52" },
-  { role: "Kabelverantwortlicher", name: "Christian Sack", addr: "Dr.-Lehmer-Str. 52" },
-  { role: "Kabelverantwortlicher", name: "Lothar Sack", addr: "Dr.-Lehmer-Str. 62" }
+  { role: "Kabelverantwortlicher", name: "Christian Sack", addr: "Dr.-Lehmer-Str. 52" }
 ];
 
 const formerChairs = [
@@ -210,8 +209,8 @@ export default function HomePage() {
               <h1>Reihenhaussiedlung Erding-Ost e.V.</h1>
               <p className="hero__sub">
                 134 Reihenhäuser, eine Gemeinschaft – seit über 50 Jahren verwalten
-                wir gemeinsam Kabelanlage, Gemeinschaftsflächen und Siedlungsbild
-                zwischen B388 und Stadtpark im Osten von Erding.
+                wir unsere gemeinsame Kabelanlage und pflegen die Gemeinschaftsflächen
+                und das Siedlungsbild zwischen B388 und Stadtpark im Osten von Erding.
               </p>
             </div>
           </div>
@@ -346,7 +345,7 @@ export default function HomePage() {
             </div>
             {boardRevisoren.map((r) => (
               <div className="board-card" key={r.name}>
-                <div className="board-card__role">Revisor</div>
+                <div className="board-card__role">{r.role}</div>
                 <div className="board-card__name">{r.name}</div>
                 <div className="board-card__addr">{r.addr}</div>
               </div>
@@ -400,7 +399,7 @@ export default function HomePage() {
                 – Der Verein übernimmt Reparaturkosten der Kabelanlage.<br />
                 – Für Reparaturen nach dem Übergabepunkt ist der Hausbewohner/Eigentümer zahlungspflichtig.
               </p>
-              <p style={{ marginTop: ".6rem" }}><strong>Siedlungsintern:</strong> Christian &amp; Lothar Sack</p>
+              <p style={{ marginTop: ".6rem" }}><strong>Siedlungsintern:</strong> Christian Sack</p>
               <p style={{ marginTop: ".3rem", fontSize: ".85rem" }}>
                 Tel: (08122) 90 00 36<br />
                 E-Mail: <a href="mailto:kabelanlage@erding-ost.de" style={{ color: "var(--c-secondary)" }}>kabelanlage@erding-ost.de</a>
