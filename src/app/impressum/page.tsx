@@ -105,6 +105,21 @@ export default function ImpressumPage() {
             </p>
           </div>
 
+          {/* ── Technische Umsetzung ── */}
+          <div className="info-card" style={{ maxWidth: 640, marginTop: "1rem" }}>
+            <h2>Technische Umsetzung</h2>
+            <p style={{ marginTop: ".75rem" }}>
+              in Zusammenarbeit mit{" "}
+              <a
+                href="https://michaelsack-web.de"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                michaelsack-web.de
+              </a>
+            </p>
+          </div>
+
           <p style={{ marginTop: "1.5rem" }}>
             <Link href="/datenschutz">Zur Datenschutzerklärung</Link>
           </p>
