@@ -211,6 +211,16 @@ h1.section__title { font-size: 1.8rem; }
 .amp-map-caption a { color: var(--c-primary); font-weight: 500; }
 .amp-map-caption a:hover { text-decoration: underline; }
 
+/* ── Map consent placeholder (2-Click DSGVO) ── */
+.map-consent-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .75rem; min-height: 420px; padding: 2rem; background: var(--c-gray-100); border: 1px solid var(--c-gray-200); border-radius: var(--r-md); text-align: center; }
+.map-consent-placeholder__icon { font-size: 2.5rem; }
+.map-consent-placeholder__text { font-size: .88rem; color: var(--c-gray-600); max-width: 420px; line-height: 1.55; }
+.map-consent-placeholder__text a { color: var(--c-primary); text-decoration: underline; text-underline-offset: 2px; }
+.map-consent-placeholder__text a:hover { color: var(--c-primary-dark); }
+.map-consent-placeholder__btn { padding: .55rem 1.25rem; background: var(--c-primary); color: #fff; border: none; border-radius: var(--r-sm); font-size: .88rem; font-weight: 600; cursor: pointer; transition: background .15s, transform .15s; }
+.map-consent-placeholder__btn:hover { background: var(--c-primary-dark); transform: translateY(-1px); }
+.map-consent-placeholder__btn:focus-visible { outline: 2px solid var(--c-primary-dark); outline-offset: 2px; }
+
 /* ── Kabelanlage highlight ── */
 .kabel-hero { margin-bottom: 1.25rem; }
 .kabel-hero .section__title { font-size: 1.6rem; }

@@ -107,9 +107,46 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 5. Externe Links ── */}
+          {/* ── 5. OpenStreetMap ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>5. Externe Links</h2>
+            <h2>5. OpenStreetMap (Kartendarstellung)</h2>
+            <p style={{ marginTop: ".75rem" }}>
+              Auf unserer Website binden wir eine interaktive Karte der
+              OpenStreetMap Foundation (OSMF), 132 Maney Hill Road, Sutton
+              Coldfield, West Midlands, B72 1JU, Vereinigtes Königreich, ein.
+              Die Kartenkacheln werden erst nach Ihrer ausdrücklichen Zustimmung
+              (Klick auf „Karte laden") von den Servern der OSMF geladen.
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              Beim Laden der Karte werden Ihre IP-Adresse und technische
+              Verbindungsdaten an Server der OSMF übermittelt. Ohne Ihren Klick
+              auf „Karte laden" findet keine Datenübermittlung statt.
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO
+              (Einwilligung durch aktive Zustimmung).
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit
+              widerrufen, indem Sie die Seite neu laden – die Karte wird dann
+              nicht erneut geladen.
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              Weitere Informationen:{" "}
+              <a
+                href="https://wiki.osmfoundation.org/wiki/Privacy_Policy"
+                target="_blank"
+                rel="noreferrer"
+              >
+                OSMF Privacy Policy
+              </a>
+              .
+            </p>
+          </div>
+
+          {/* ── 6. Externe Links ── */}
+          <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
+            <h2>6. Externe Links</h2>
             <p style={{ marginTop: ".75rem" }}>
               Diese Website enthält Links auf externe Seiten (z. B. PDF-Dokumente).
               Beim Anklicken dieser Links verlassen Sie unsere Website. Für die
@@ -118,9 +155,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 6. Betroffenenrechte ── */}
+          {/* ── 7. Betroffenenrechte ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>6. Ihre Rechte als betroffene Person</h2>
+            <h2>7. Ihre Rechte als betroffene Person</h2>
             <p style={{ marginTop: ".75rem" }}>
               Sie haben gegenüber uns folgende Rechte hinsichtlich Ihrer
               personenbezogenen Daten:
@@ -142,9 +179,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 7. Beschwerderecht / Aufsichtsbehörde ── */}
+          {/* ── 8. Beschwerderecht / Aufsichtsbehörde ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>7. Beschwerderecht bei der Aufsichtsbehörde</h2>
+            <h2>8. Beschwerderecht bei der Aufsichtsbehörde</h2>
             <p style={{ marginTop: ".75rem" }}>
               Sie haben das Recht, sich bei der zuständigen
               Datenschutz-Aufsichtsbehörde zu beschweren:
@@ -159,9 +196,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 8. Änderungen ── */}
+          {/* ── 9. Änderungen ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>8. Änderungen dieser Datenschutzerklärung</h2>
+            <h2>9. Änderungen dieser Datenschutzerklärung</h2>
             <p style={{ marginTop: ".75rem" }}>
               Wir passen diese Datenschutzerklärung an, wenn sich rechtliche
               Anforderungen oder unsere Verarbeitungstätigkeiten ändern. Das Datum
