@@ -10,19 +10,19 @@ import MobileNav from "./components/MobileNav";
 /* News: items younger than ~1 year appear in "Aktuelles", older ones in "Archiv" */
 const currentNews = [
   {
-    title: "Einladung Jahreshauptversammlung 2026",
-    date: "15. April 2026",
-    text: "Am 15. April 2026 findet die nächste Jahreshauptversammlung statt. Alle Mitglieder sind herzlich eingeladen.",
-    href: "/dokumente/Einladung_JHV_2026.pdf",
-    cta: "Einladung herunterladen",
-    color: "badge"
-  },
-  {
     title: "Protokoll der JHV 2026",
     date: "2026",
     text: "Das Protokoll der letzten Jahreshauptversammlung steht als PDF zum Download bereit.",
     href: "/dokumente/jhv-2026-protokoll.pdf",
     cta: "Protokoll öffnen",
+    color: "badge"
+  },
+  {
+    title: "Einladung Jahreshauptversammlung 2026",
+    date: "15. April 2026",
+    text: "Am 15. April 2026 findet die nächste Jahreshauptversammlung statt. Alle Mitglieder sind herzlich eingeladen.",
+    href: "/dokumente/Einladung_JHV_2026.pdf",
+    cta: "Einladung herunterladen",
     color: "badge"
   },
   {
