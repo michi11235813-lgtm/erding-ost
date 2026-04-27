@@ -18,10 +18,10 @@ const currentNews = [
     color: "badge"
   },
   {
-    title: "Protokoll der JHV 2025",
-    date: "2025",
+    title: "Protokoll der JHV 2026",
+    date: "2026",
     text: "Das Protokoll der letzten Jahreshauptversammlung steht als PDF zum Download bereit.",
-    href: "/dokumente/jhv-2025-protokoll.pdf",
+    href: "/dokumente/jhv-2026-protokoll.pdf",
     cta: "Protokoll öffnen",
     color: "badge"
   },
@@ -137,6 +137,7 @@ const pressArticles = [
 const sommerfeste = [2000,2001,2002,2003,2004,2005,2008,2009,2010,2011];
 
 const protokolle = [
+  { year: 2026, href: "/dokumente/jhv-2026-protokoll.pdf" },
   { year: 2025, href: "/dokumente/jhv-2025-protokoll.pdf" },
   { year: 2024, href: "/dokumente/jhv-2024-protokoll.pdf" },
   { year: 2023, href: "/dokumente/jhv-2023-protokoll.pdf" },
