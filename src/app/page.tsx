@@ -315,7 +315,24 @@ export default function HomePage() {
               </p>
             </article>
             <article className="info-card">
-              <div className="info-card__icon" aria-hidden="true">📄</div>
+              <div className="info-card__icon" aria-hidden="true">�</div>
+              <h3>Infoblatt</h3>
+              <p>
+                Das Infoblatt enthält alle wichtigen Informationen für Vereinsmitglieder
+                und steht hier zum Download bereit.
+              </p>
+              <a
+                className="info-card__link"
+                href="/dokumente/RHS-Infoblatt-2026.pdf"
+                download="RHS-Infoblatt-2026.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Infoblatt herunterladen
+              </a>
+            </article>
+            <article className="info-card">
+              <div className="info-card__icon" aria-hidden="true">�📄</div>
               <h3>Satzung &amp; Geschäftsordnung</h3>
               <p>
                 Details sind in der Satzung und der Geschäftsordnung festgelegt.
