@@ -10,6 +10,14 @@ import MobileNav from "./components/MobileNav";
 /* News: items younger than ~1 year appear in "Aktuelles", older ones in "Archiv" */
 const currentNews = [
   {
+    title: "Einladung zum Siedlungs-Zaunfest 2026",
+    date: "27. Juni 2026",
+    text: "Am Samstag, 27.06.2026 ab 14:00 Uhr - Open End im Garagenhof Dr.-Lehmer-Str.",
+    href: "/dokumente/RHS-Einladung-zum-Sommerfest-2026.jpeg",
+    cta: "Einladung herunterladen",
+    color: "badge"
+  },
+  {
     title: "Protokoll der JHV 2026",
     date: "2026",
     text: "Das Protokoll der letzten Jahreshauptversammlung steht als PDF zum Download bereit.",
@@ -24,7 +32,10 @@ const currentNews = [
     href: "/dokumente/Einladung_JHV_2026.pdf",
     cta: "Einladung herunterladen",
     color: "badge"
-  },
+  }
+];
+
+const archiveNews = [
   {
     title: "Grüngut-Container 2025",
     date: "24.–26. Okt. 2025",
@@ -32,10 +43,7 @@ const currentNews = [
     href: "/dokumente/Aushang_GruengutContainer-2025.pdf",
     cta: "Mehr erfahren",
     color: "badge"
-  }
-];
-
-const archiveNews = [
+  },
   {
     title: "ARD nur noch in HD",
     date: "Seit Januar 2025",
@@ -384,6 +392,21 @@ export default function HomePage() {
               </a>
             </article>
             <article className="info-card">
+              <div className="info-card__icon" aria-hidden="true">📻</div>
+              <h3>UKW-Radioprogramme</h3>
+              <p>
+                Im Kabelnetz sind zahlreiche UKW-Radioprogramme verfügbar – von lokalen Stationen
+                bis zu bayerischen und bundesweiten Programmen.
+              </p>
+              <a
+                className="info-card__link"
+                href="/dokumente/UKW-Radioprogramme-2026.txt"
+                download="UKW-Radioprogramme-2026.txt"
+              >
+                Programmliste anzeigen
+              </a>
+            </article>
+            <article className="info-card">
               <div className="info-card__icon" aria-hidden="true">🔧</div>
               <h3>Unser Servicepartner</h3>
               <p>
@@ -423,23 +446,6 @@ export default function HomePage() {
                 <strong>{street}:</strong> {houses.join(", ")}
               </p>
             ))}
-          </div>
-
-          {/* UKW Radiosender */}
-          <h3 className="subsection__title" style={{ marginTop: "2rem" }}>UKW-Radioprogramme im Kabelnetz</h3>
-          <div className="radio-table-wrap">
-            <table className="radio-table">
-              <thead>
-                <tr><th>Sender</th><th>MHz</th><th>Standort</th></tr>
-              </thead>
-              <tbody>
-                {radioStations.map((s) => (
-                  <tr key={s.name + s.freq}>
-                    <td>{s.name}</td><td>{s.freq}</td><td>{s.loc}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         </section>
 

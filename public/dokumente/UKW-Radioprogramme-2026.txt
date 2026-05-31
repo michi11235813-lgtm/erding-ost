@@ -1,0 +1,21 @@
+UKW-Radioprogramme im Kabelnetz
+Reihenhaussiedlung Erding-Ost e.V.
+Stand: 2026
+
+Sender | MHz | Standort
+Hitwelle Lokalradio | 87,9 | Erding
+Hitwelle Lokalradio | 99,4 | Moosinning
+Radio Arabella | 105,2 | München
+Bayern 1 Oberbayern | 93,7 | Wendelstein
+Bayern 1 München | 91,3 | Ismaning
+Bayern 2 Oberbayern | 89,5 | Wendelstein
+Bayern 3 | 98,5 | Wendelstein
+BR-Klassik | 102,3 | Wendelstein
+B5 Aktuell | 105,7 | Wendelstein
+Antenne Bayern | 101,3 | München
+Klassik Radio | 107,2 | München
+Charivari | 95,5 | München
+Radio Gong | 96,3 | München
+Radio Energy | 93,3 | München
+DLF | 101,7 |
+DKultur | 103,5 |
