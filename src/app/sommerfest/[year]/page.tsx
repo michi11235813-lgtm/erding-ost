@@ -20,6 +20,7 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
   if (!data) notFound();
 
   const folder = folderForYear(year);
+  const images = data.images ?? [];
   const prevYear = sommerfestYears[sommerfestYears.indexOf(year) + 1];
   const nextYear = sommerfestYears[sommerfestYears.indexOf(year) - 1];
 
@@ -80,9 +81,9 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
             </div>
           )}
 
-          {data.images?.length > 0 && (
+          {images.length > 0 && (
             <div className="gallery-grid">
-              {data.images.map((img) => (
+              {images.map((img) => (
                 <div className="gallery-item" key={img}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
