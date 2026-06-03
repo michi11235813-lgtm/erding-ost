@@ -15,7 +15,11 @@ const currentNews = [
     text: "Am Samstag, 27.06.2026 ab 14:00 Uhr - Open End im Garagenhof Dr.-Lehmer-Str.",
     href: "/dokumente/RHS-Einladung-zum-Sommerfest-2026.jpeg",
     cta: "Einladung herunterladen",
-    color: "badge"
+    color: "badge",
+    extraLink: {
+      href: "/sommerfest/1975",
+      text: "historische Super-8 Eindrücke unserer Sommerfeste von 1975 und 1979 von Lothar Sack"
+    }
   },
   {
     title: "Protokoll der JHV 2026",
@@ -142,7 +146,7 @@ const pressArticles = [
   { title: "Landtag verweigert Unterstützung für Lärmschutzwand", source: "Erdinger Nachrichten, 14.05.2009", href: "/dokumente/2009-05-14-sz.pdf" }
 ];
 
-const sommerfeste = [2000,2001,2002,2003,2004,2005,2008,2009,2010,2011];
+const sommerfeste = [2000,2001,2002,2003,2004,2005,2008,2009,2010,2011,"1975/79"];
 
 const protokolle = [
   { year: 2026, href: "/dokumente/jhv-2026-protokoll.pdf" },
@@ -238,6 +242,11 @@ export default function HomePage() {
                 <h3>{n.title}</h3>
                 <p>{n.text}</p>
                 <a className="card-cta" href={n.href} target="_blank" rel="noreferrer">{n.cta}</a>
+                {n.extraLink && (
+                  <a className="card-cta card-cta--secondary" href={n.extraLink.href}>
+                    {n.extraLink.text}
+                  </a>
+                )}
               </article>
             ))}
           </div>
@@ -508,11 +517,15 @@ export default function HomePage() {
           {/* Sommerfeste */}
           <h3 className="subsection__title">Sommerfeste</h3>
           <div className="retro-grid">
-            {sommerfeste.map((year) => (
-              <Link className="retro-chip" key={year} href={`/sommerfest/${year}`}>
-                Sommerfest {year}
-              </Link>
-            ))}
+            {sommerfeste.map((year) => {
+              const yearNum = typeof year === "string" ? 1975 : year;
+              const yearDisplay = typeof year === "string" ? year : year;
+              return (
+                <Link className="retro-chip" key={year} href={`/sommerfest/${yearNum}`}>
+                  Sommerfest {yearDisplay}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Lärmschutzwall B388 */}

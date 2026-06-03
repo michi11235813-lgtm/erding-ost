@@ -1,5 +1,10 @@
 /* Image data for each Sommerfest year */
-export const sommerfestData: Record<number, { images: string[]; note?: string }> = {
+export const sommerfestData: Record<number, { images?: string[]; video?: string; title?: string; description?: string; note?: string; relatedPage?: { href: string; text: string } }> = {
+  1975: {
+    video: "1975-sofest.mp4",
+    title: "Sommerfeste 1975/79",
+    description: "Historische Super-8 Filmaufnahmen unserer Sommerfeste von 1975 und 1979 von Lothar Sack erstellt und zur Verfügung gestellt."
+  },
   2000: {
     images: [
       "105-0562_IMG.jpg","106-0634_IMG.jpg","106-0630_IMG.jpg","105-0588_IMG.jpg",
@@ -62,11 +67,15 @@ export const sommerfestData: Record<number, { images: string[]; note?: string }>
       "Bild 301.jpg","Bild 310.jpg","Bild 314.jpg","Bild 327.jpg",
       "Bild 329.jpg","Bild 337.jpg","Bild 340.jpg","Bild 328.jpg",
       "Bild 330.jpg","Bild 335.jpg"
-    ]
+    ],
+    relatedPage: {
+      href: "/sommerfest/1975",
+      text: "Zurück zu den historischen Super-8 Eindrücken unserer Sommerfeste von 1975/79"
+    }
   }
 };
 
-export const sommerfestYears = [2011, 2010, 2009, 2008, 2005, 2004, 2003, 2002, 2001, 2000];
+export const sommerfestYears = [2011, 2010, 2009, 2008, 2005, 2004, 2003, 2002, 2001, 2000, 1975];
 
 /* Map year to the subfolder name on disk (public/bilder/sofestYYYY/) */
 export function folderForYear(year: number): string {

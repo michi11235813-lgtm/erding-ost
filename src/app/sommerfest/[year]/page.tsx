@@ -46,13 +46,41 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
           <div className="section__header">
             <Link href="/#rueckblicke" className="back-link">&larr; Rückblicke</Link>
             <h1 className="section__title" style={{ marginTop: ".5rem" }}>
-              Sommerfest {year}
+              {data.title || `Sommerfest ${year}`}
             </h1>
           </div>
 
+          {data.description && <p className="section__desc">{data.description}</p>}
           {data.note && <p className="section__desc">{data.note}</p>}
+          {data.relatedPage && (
+            <p className="section__desc">
+              <a href={data.relatedPage.href} className="card-cta card-cta--secondary">
+                {data.relatedPage.text}
+              </a>
+            </p>
+          )}
 
-          {data.images.length > 0 && (
+          {data.video && (
+            <div style={{ marginBottom: "2rem" }}>
+              <video
+                width="100%"
+                height="auto"
+                controls
+                style={{
+                  maxWidth: "800px",
+                  margin: "0 auto",
+                  display: "block",
+                  borderRadius: "8px",
+                  backgroundColor: "#000"
+                }}
+              >
+                <source src={`/bilder/${folder}/${encodeURIComponent(data.video)}`} type="video/mp4" />
+                Dein Browser unterstützt das Video-Element nicht.
+              </video>
+            </div>
+          )}
+
+          {data.images?.length > 0 && (
             <div className="gallery-grid">
               {data.images.map((img) => (
                 <div className="gallery-item" key={img}>
