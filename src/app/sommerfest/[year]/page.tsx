@@ -24,6 +24,8 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
   const prevYear = sommerfestYears[sommerfestYears.indexOf(year) + 1];
   const nextYear = sommerfestYears[sommerfestYears.indexOf(year) - 1];
 
+  const videoSrc = data.video ? (data.video.startsWith("http") ? data.video : `/bilder/${folder}/${encodeURIComponent(data.video)}`) : undefined;
+
   return (
     <>
       <header className="header">
@@ -75,7 +77,7 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
                   backgroundColor: "#000"
                 }}
               >
-                <source src={`/bilder/${folder}/${encodeURIComponent(data.video)}`} type="video/mp4" />
+                <source src={videoSrc} type="video/mp4" />
                 Dein Browser unterstützt das Video-Element nicht.
               </video>
             </div>
