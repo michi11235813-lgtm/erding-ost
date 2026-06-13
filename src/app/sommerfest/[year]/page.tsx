@@ -69,6 +69,8 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
                 width="100%"
                 height="auto"
                 controls
+                preload="metadata"
+                playsInline
                 style={{
                   maxWidth: "800px",
                   margin: "0 auto",
