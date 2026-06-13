@@ -1,7 +1,7 @@
 /* Image data for each Sommerfest year */
 export const sommerfestData: Record<number, { images?: string[]; video?: string; title?: string; description?: string; note?: string; relatedPage?: { href: string; text: string } }> = {
   1975: {
-    video: "https://my.hidrive.com/api/sharelink/download?id=OpQnueEHC",
+    video: "https://youtu.be/t_FYzSPyG30",
     title: "Sommerfeste 1975/79",
     description: "Historische Super-8 Filmaufnahmen unserer Sommerfeste von 1975 und 1979 von Lothar Sack erstellt und zur Verfügung gestellt."
   },

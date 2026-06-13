@@ -24,7 +24,28 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
   const prevYear = sommerfestYears[sommerfestYears.indexOf(year) + 1];
   const nextYear = sommerfestYears[sommerfestYears.indexOf(year) - 1];
 
-  const videoSrc = data.video ? (data.video.startsWith("http") ? data.video : `/bilder/${folder}/${encodeURIComponent(data.video)}`) : undefined;
+  const isYouTube = data.video ? /(?:youtu\.be\/|youtube\.com\/)/i.test(data.video) : false;
+  const youTubeId = isYouTube
+    ? (() => {
+        const ytUrl = data.video || "";
+        const shortIdMatch = ytUrl.match(/youtu\.be\/([A-Za-z0-9_-]+)/i);
+        if (shortIdMatch) return shortIdMatch[1];
+        const watchMatch = ytUrl.match(/[?&]v=([A-Za-z0-9_-]+)/i);
+        if (watchMatch) return watchMatch[1];
+        const embedMatch = ytUrl.match(/youtube\.com\/embed\/([A-Za-z0-9_-]+)/i);
+        if (embedMatch) return embedMatch[1];
+        const shortsMatch = ytUrl.match(/youtube\.com\/shorts\/([A-Za-z0-9_-]+)/i);
+        if (shortsMatch) return shortsMatch[1];
+        return undefined;
+      })()
+    : undefined;
+  const videoSrc = data.video
+    ? isYouTube
+      ? `https://www.youtube.com/embed/${youTubeId}?rel=0&modestbranding=1&showinfo=0`
+      : data.video.startsWith("http")
+      ? data.video
+      : `/bilder/${folder}/${encodeURIComponent(data.video)}`
+    : undefined;
 
   return (
     <>
@@ -65,23 +86,43 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
 
           {data.video && (
             <div style={{ marginBottom: "2rem" }}>
-              <video
-                width="100%"
-                height="auto"
-                controls
-                preload="metadata"
-                playsInline
-                style={{
-                  maxWidth: "800px",
-                  margin: "0 auto",
-                  display: "block",
-                  borderRadius: "8px",
-                  backgroundColor: "#000"
-                }}
-              >
-                <source src={videoSrc} type="video/mp4" />
-                Dein Browser unterstützt das Video-Element nicht.
-              </video>
+              {isYouTube && youTubeId ? (
+                <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, maxWidth: "800px", margin: "0 auto" }}>
+                  <iframe
+                    src={videoSrc}
+                    title={`Sommerfest ${year} Video`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      border: 0,
+                      borderRadius: "8px"
+                    }}
+                  />
+                </div>
+              ) : (
+                <video
+                  width="100%"
+                  height="auto"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  style={{
+                    maxWidth: "800px",
+                    margin: "0 auto",
+                    display: "block",
+                    borderRadius: "8px",
+                    backgroundColor: "#000"
+                  }}
+                >
+                  <source src={videoSrc} type="video/mp4" />
+                  Dein Browser unterstützt das Video-Element nicht.
+                </video>
+              )}
             </div>
           )}
 
