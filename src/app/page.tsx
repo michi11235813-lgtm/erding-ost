@@ -18,7 +18,7 @@ const currentNews = [
     color: "badge",
     extraLink: {
       href: "/sommerfest/1975",
-      text: "historische Super-8 Eindrücke unserer Sommerfeste von 1975 und 1979 von Lothar Sack"
+      text: "Historische Super-8 Eindrücke unserer Sommerfeste von 1975 und 1979 von Lothar Sack"
     }
   },
   {
