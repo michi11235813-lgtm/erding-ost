@@ -436,26 +436,19 @@ export default function HomePage() {
               <div className="info-card__icon" aria-hidden="true">🔧</div>
               <h3>Unser Servicepartner</h3>
               <p>
-                Sempt-EW hat die SAT-Kabelanlage installiert und übernimmt weiterhin den technischen
-                Service. Störungen werden – soweit möglich – auch an Wochenenden und Feiertagen behoben.
-                Ein Wartungsvertrag wird jedoch nicht angeboten.
+                Die Firma Frei, Erding (Tel. 08122/85040) hat den technischen Service der Kabelanlage übernommen. Störungen werden – soweit möglich – auch an Wochenenden und Feiertagen behoben.
               </p>
             </article>
             <article className="info-card">
               <div className="info-card__icon" aria-hidden="true">📞</div>
               <h3>Bei Störungen der Kabelanlage</h3>
-              <p><strong>Sempt-EW Hotline:</strong> (08122) 9827-21</p>
+              <p><strong>Fa. Frei Hotline:</strong> (08122) 85040</p>
               <p style={{ marginTop: ".3rem", fontSize: ".85rem" }}>
                 – Der Verein übernimmt Reparaturkosten der Kabelanlage.<br />
                 – Für Reparaturen nach dem Übergabepunkt ist der Hausbewohner/Eigentümer zahlungspflichtig.
               </p>
-              <p style={{ marginTop: ".6rem" }}><strong>Siedlungsintern:</strong> Christian Sack</p>
-              <p style={{ marginTop: ".3rem", fontSize: ".85rem" }}>
-                Tel: (08122) 90 00 36<br />
-                E-Mail: <a href="mailto:kabelanlage@erding-ost.de" style={{ color: "var(--c-secondary)" }}>kabelanlage@erding-ost.de</a>
-              </p>
-              <p style={{ marginTop: ".3rem", fontSize: ".82rem", color: "var(--c-gray-600)" }}>
-                Bitte alle Reparaturen an der Kabelanlage melden (ggf. nachträglich).
+              <p style={{ marginTop: ".6rem" }}>
+                Bitte informieren Sie den Verein über erteilte Reparaturaufträge der Kabelanlage → Christian Sack, Tel: (08122) 90 00 36 oder E-Mail: <a href="mailto:kabelanlage@erding-ost.de" style={{ color: "var(--c-secondary)" }}>kabelanlage@erding-ost.de</a>.
               </p>
             </article>
           </div>
