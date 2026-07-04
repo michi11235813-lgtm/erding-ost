@@ -204,6 +204,9 @@ h1.section__title { font-size: 1.8rem; }
 .archive-section__summary::-webkit-details-marker { display: none; }
 .news-card--archive { opacity: .75; }
 
+/* ── Collapsible Rückblicke-Kachel ── */
+.archive-section .timeline { margin-top: .75rem; }
+
 /* ── Amplifier map ── */
 .amp-map-wrap { margin: 1rem 0 1.5rem; border: 1px solid var(--c-gray-200); border-radius: var(--r-md); overflow: hidden; background: var(--c-white); }
 .amp-map-wrap iframe { width: 100%; }

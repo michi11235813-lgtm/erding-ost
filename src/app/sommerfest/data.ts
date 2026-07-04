@@ -72,10 +72,18 @@ export const sommerfestData: Record<number, { images?: string[]; video?: string;
       href: "/sommerfest/1975",
       text: "Zurück zu den historischen Super-8 Eindrücken unserer Sommerfeste von 1975/79"
     }
+  },
+  2026: {
+    images: [
+      "RHS-Einladung-zum-Sommerfest-2026.jpeg",
+      "IMG-20260702-WA0000.jpg"
+    ],
+    title: "Sommerfest 2026",
+    description: "Einladung zum Sommerfest 2026 der Reihenhaussiedlung Erding-Ost e.V."
   }
 };
 
-export const sommerfestYears = [2011, 2010, 2009, 2008, 2005, 2004, 2003, 2002, 2001, 2000, 1975];
+export const sommerfestYears = [2026, 2011, 2010, 2009, 2008, 2005, 2004, 2003, 2002, 2001, 2000, 1975];
 
 /* Map year to the subfolder name on disk (public/bilder/sofestYYYY/) */
 export function folderForYear(year: number): string {

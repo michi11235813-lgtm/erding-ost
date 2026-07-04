@@ -10,11 +10,21 @@ import MobileNav from "./components/MobileNav";
 /* News: items younger than ~1 year appear in "Aktuelles", older ones in "Archiv" */
 const currentNews = [
   {
-    title: "Einladung zum Siedlungs-Zaunfest 2026",
+    title: "Neuer Servicepartner für Kabelanlage",
+    date: "01. Juli 2026",
+    text: "Die Reihenhaussiedlung informiert über einen geänderten Servicepartner für die Kabelanlage. Weitere Informationen sind im PDF hinterlegt. Mehr dazu weiter unten im Abschnitt Kabelanlage.",
+    href: "/dokumente/servicepartner-kabelanlage-frei.pdf",
+    cta: "PDF herunterladen",
+    color: "badge"
+  },
+  {
+    title: "Siedlungs-Zaunfest 2026",
     date: "27. Juni 2026",
-    text: "Am Samstag, 27.06.2026 ab 14:00 Uhr - Open End im Garagenhof Dr.-Lehmer-Str.",
-    href: "/dokumente/RHS-Einladung-zum-Sommerfest-2026.jpeg",
-    cta: "Einladung herunterladen",
+    text: "zu veröffentlichende Bilder gerne an ",
+    email: "webmaster@erding-ost.de",
+    textSuffix: " schicken",
+    href: "/sommerfest/2026",
+    cta: "Zur Sommerfest-2026-Seite",
     color: "badge",
     extraLink: {
       href: "/sommerfest/1975",
@@ -28,7 +38,10 @@ const currentNews = [
     href: "/dokumente/jhv-2026-protokoll.pdf",
     cta: "Protokoll öffnen",
     color: "badge"
-  },
+  }
+];
+
+const archiveNews = [
   {
     title: "Einladung Jahreshauptversammlung 2026",
     date: "15. April 2026",
@@ -36,10 +49,7 @@ const currentNews = [
     href: "/dokumente/Einladung_JHV_2026.pdf",
     cta: "Einladung herunterladen",
     color: "badge"
-  }
-];
-
-const archiveNews = [
+  },
   {
     title: "Grüngut-Container 2025",
     date: "24.–26. Okt. 2025",
@@ -89,12 +99,12 @@ const boardExtras = [
 ];
 
 const formerChairs = [
-  "Willibald Beitel (1976–198x)",
+  "Willibald Beitel",
   "Lothar Sack",
-  "Hans Döllel (–1998)",
-  "Adly Whaba (1998–2005)",
-  "Christian Sack (2005–2008)",
-  "Bernd Nitzschmann (2008–)",
+  "Hans Döllel",
+  "Adly Whaba",
+  "Christian Sack",
+  "Bernd Nitzschmann",
   "Hendrik Wanger",
   "Gustav Schultz"
 ];
@@ -146,7 +156,7 @@ const pressArticles = [
   { title: "Landtag verweigert Unterstützung für Lärmschutzwand", source: "Erdinger Nachrichten, 14.05.2009", href: "/dokumente/2009-05-14-sz.pdf" }
 ];
 
-const sommerfeste = [2000,2001,2002,2003,2004,2005,2008,2009,2010,2011,"1975/79"];
+const sommerfeste = [2026,2000,2001,2002,2003,2004,2005,2008,2009,2010,2011,"1975/79"];
 
 const protokolle = [
   { year: 2026, href: "/dokumente/jhv-2026-protokoll.pdf" },
@@ -240,8 +250,16 @@ export default function HomePage() {
               <article className="news-card" key={n.title}>
                 <span className={`badge ${n.color}`}>{n.date}</span>
                 <h3>{n.title}</h3>
-                <p>{n.text}</p>
-                <a className="card-cta" href={n.href} target="_blank" rel="noreferrer">{n.cta}</a>
+                <p>
+                  {n.text}
+                  {n.email && (
+                    <a href={`mailto:${n.email}`}>
+                      {n.email}
+                    </a>
+                  )}
+                  {n.textSuffix}
+                </p>
+                <a className="card-cta" href={n.href}>{n.cta}</a>
                 {n.extraLink && (
                   <a className="card-cta card-cta--secondary" href={n.extraLink.href}>
                     {n.extraLink.text}
@@ -527,17 +545,20 @@ export default function HomePage() {
             Seit über zwei Jahrzehnten setzen wir uns für Lärmschutz an der B388 ein.
             2011 wurde ein Flüsterbelag aufgebracht – das Engagement geht weiter.
           </p>
-          <div className="timeline">
-            {pressArticles.map((a) => (
-              <a className="timeline-item" key={a.title} href={a.href} target="_blank" rel="noreferrer">
-                <div className="timeline-dot" />
-                <div className="timeline-item__content">
-                  <div className="timeline-item__title">{a.title}</div>
-                  <div className="timeline-item__sub">{a.source}</div>
-                </div>
-              </a>
-            ))}
-          </div>
+          <details className="archive-section">
+            <summary className="archive-section__summary">Alle Presseartikel zum Lärmschutzwall B388 anzeigen</summary>
+            <div className="timeline" style={{ marginTop: "1rem" }}>
+              {pressArticles.map((a) => (
+                <a className="timeline-item" key={a.title} href={a.href} target="_blank" rel="noreferrer">
+                  <div className="timeline-dot" />
+                  <div className="timeline-item__content">
+                    <div className="timeline-item__title">{a.title}</div>
+                    <div className="timeline-item__sub">{a.source}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </details>
 
           {/* Ehemalige Vorstände */}
           <h3 className="subsection__title" style={{ marginTop: "2rem" }}>Ehemalige Vorstände</h3>
