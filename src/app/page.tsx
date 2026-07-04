@@ -105,8 +105,8 @@ const formerChairs = [
   "Adly Whaba",
   "Christian Sack",
   "Bernd Nitzschmann",
-  "Hendrik Wanger",
-  "Gustav Schultz"
+  "Gustav Schultz",
+  "Hendrik Wanger"
 ];
 
 const documents = [
