@@ -100,7 +100,7 @@ export default function OgImage() {
             letterSpacing: "0.04em",
           }}
         >
-          erding-ost.vercel.app
+          erding-ost.de
         </div>
       </div>
     ),

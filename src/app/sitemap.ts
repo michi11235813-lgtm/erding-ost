@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE = "https://erding-ost.vercel.app";
+import { SITE_URL as BASE } from "./site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const sommerfeste = [2026, 2000, 2001, 2002, 2003, 2004, 2005, 2008, 2009, 2010, 2011];

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { SITE_URL } from "./site";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap"
 });
-
-const SITE_URL = "https://erding-ost.vercel.app";
 
 export const metadata: Metadata = {
   title: "Reihenhaussiedlung Erding-Ost e.V.",
