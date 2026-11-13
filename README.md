@@ -13,7 +13,7 @@ Diese Repository ist als reine Frontend-Web-App mit Next.js aufgebaut.
 
 Voraussetzungen:
 
-- Node.js 20+
+- Node.js 20.9+ (CI nutzt Node 24)
 - npm 10+
 
 Befehle:
