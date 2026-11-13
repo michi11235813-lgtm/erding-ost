@@ -97,20 +97,58 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 4. Cookies und Tracking ── */}
+          {/* ── 4. Reichweitenmessung (Vercel Web Analytics) ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>4. Cookies und Tracking</h2>
+            <h2>4. Reichweitenmessung (Vercel Web Analytics)</h2>
             <p style={{ marginTop: ".75rem" }}>
-              Auf dieser Website werden keine nicht-essentiellen Cookies, keine
-              Analyse-Tools und kein Marketing-Tracking eingesetzt. Es werden keine
-              Cookie-Banner benötigt. Externe Inhalte (Karte, Videos) werden erst
-              nach Ihrem Klick geladen (siehe Abschnitte 5 und 6).
+              Um zu verstehen, welche Inhalte genutzt werden, verwenden wir Vercel
+              Web Analytics des unter Abschnitt 2 genannten Hosters Vercel Inc. Dabei
+              werden beim Seitenaufruf die aufgerufene Seite, die verweisende Seite
+              (Referrer), Datum/Uhrzeit sowie Angaben zu Browser, Betriebssystem,
+              Gerätetyp und Land übermittelt.
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              Es werden <strong>keine Cookies</strong> gesetzt und keine Informationen
+              auf Ihrem Endgerät gespeichert oder ausgelesen. Besucher werden nicht
+              über mehrere Tage oder Websites hinweg wiedererkannt: Zur Zählung wird
+              lediglich ein aus Anfrage-Daten gebildeter Hashwert verwendet, der nach
+              24 Stunden verworfen wird. Ihre IP-Adresse wird nicht gespeichert. Wir
+              erhalten ausschließlich zusammengefasste, anonyme Statistiken.
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO
+              (berechtigtes Interesse an einer datensparsamen Auswertung der
+              Website-Nutzung zur Verbesserung unseres Angebots).
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              <strong>Drittlandtransfer:</strong> wie unter Abschnitt 2 beschrieben.
+              Weitere Informationen:{" "}
+              <a
+                href="https://vercel.com/docs/analytics/privacy-policy"
+                target="_blank"
+                rel="noreferrer"
+              >
+                vercel.com/docs/analytics/privacy-policy
+              </a>
+              .
             </p>
           </div>
 
-          {/* ── 5. OpenStreetMap ── */}
+          {/* ── 5. Cookies und Tracking ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>5. OpenStreetMap (Kartendarstellung)</h2>
+            <h2>5. Cookies und Tracking</h2>
+            <p style={{ marginTop: ".75rem" }}>
+              Auf dieser Website werden keine Cookies und kein Marketing-Tracking
+              eingesetzt. Die Reichweitenmessung (Abschnitt 4) arbeitet ohne Cookies
+              und ohne Zugriff auf Ihr Endgerät; ein Cookie-Banner ist daher nicht
+              erforderlich. Externe Inhalte (Karte, Videos) werden erst
+              nach Ihrem Klick geladen (siehe Abschnitte 6 und 7).
+            </p>
+          </div>
+
+          {/* ── 6. OpenStreetMap ── */}
+          <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
+            <h2>6. OpenStreetMap (Kartendarstellung)</h2>
             <p style={{ marginTop: ".75rem" }}>
               Auf unserer Website binden wir eine interaktive Karte der
               OpenStreetMap Foundation (OSMF), 132 Maney Hill Road, Sutton
@@ -145,9 +183,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 6. YouTube ── */}
+          {/* ── 7. YouTube ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>6. YouTube (Videos)</h2>
+            <h2>7. YouTube (Videos)</h2>
             <p style={{ marginTop: ".75rem" }}>
               Auf einzelnen Seiten (z. B. Rückblick Sommerfeste 1975/79) binden
               wir Videos der Plattform YouTube ein. Anbieter ist die Google Ireland
@@ -190,9 +228,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 7. Externe Links ── */}
+          {/* ── 8. Externe Links ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>7. Externe Links</h2>
+            <h2>8. Externe Links</h2>
             <p style={{ marginTop: ".75rem" }}>
               Diese Website enthält Links auf externe Seiten (z. B. PDF-Dokumente).
               Beim Anklicken dieser Links verlassen Sie unsere Website. Für die
@@ -201,9 +239,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 8. Betroffenenrechte ── */}
+          {/* ── 9. Betroffenenrechte ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>8. Ihre Rechte als betroffene Person</h2>
+            <h2>9. Ihre Rechte als betroffene Person</h2>
             <p style={{ marginTop: ".75rem" }}>
               Sie haben gegenüber uns folgende Rechte hinsichtlich Ihrer
               personenbezogenen Daten:
@@ -225,9 +263,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 9. Beschwerderecht / Aufsichtsbehörde ── */}
+          {/* ── 10. Beschwerderecht / Aufsichtsbehörde ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>9. Beschwerderecht bei der Aufsichtsbehörde</h2>
+            <h2>10. Beschwerderecht bei der Aufsichtsbehörde</h2>
             <p style={{ marginTop: ".75rem" }}>
               Sie haben das Recht, sich bei der zuständigen
               Datenschutz-Aufsichtsbehörde zu beschweren:
@@ -242,9 +280,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 10. Änderungen ── */}
+          {/* ── 11. Änderungen ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>10. Änderungen dieser Datenschutzerklärung</h2>
+            <h2>11. Änderungen dieser Datenschutzerklärung</h2>
             <p style={{ marginTop: ".75rem" }}>
               Wir passen diese Datenschutzerklärung an, wenn sich rechtliche
               Anforderungen oder unsere Verarbeitungstätigkeiten ändern. Das Datum
