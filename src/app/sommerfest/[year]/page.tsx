@@ -41,7 +41,7 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
     : undefined;
   const videoSrc = data.video
     ? isYouTube
-      ? `https://www.youtube.com/embed/${youTubeId}?rel=0&modestbranding=1&showinfo=0`
+      ? `https://www.youtube-nocookie.com/embed/${youTubeId}?rel=0&modestbranding=1&showinfo=0`
       : data.video.startsWith("http")
       ? data.video
       : `/bilder/${folder}/${encodeURIComponent(data.video)}`
@@ -93,6 +93,7 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
                     title={`Sommerfest ${year} Video`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    referrerPolicy="strict-origin-when-cross-origin"
                     style={{
                       position: "absolute",
                       top: 0,

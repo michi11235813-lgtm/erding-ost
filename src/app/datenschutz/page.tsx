@@ -115,12 +115,12 @@ export default function DatenschutzPage() {
               OpenStreetMap Foundation (OSMF), 132 Maney Hill Road, Sutton
               Coldfield, West Midlands, B72 1JU, Vereinigtes Königreich, ein.
               Die Kartenkacheln werden erst nach Ihrer ausdrücklichen Zustimmung
-              (Klick auf „Karte laden") von den Servern der OSMF geladen.
+              (Klick auf „Karte laden&quot;) von den Servern der OSMF geladen.
             </p>
             <p style={{ marginTop: ".5rem" }}>
               Beim Laden der Karte werden Ihre IP-Adresse und technische
               Verbindungsdaten an Server der OSMF übermittelt. Ohne Ihren Klick
-              auf „Karte laden" findet keine Datenübermittlung statt.
+              auf „Karte laden&quot; findet keine Datenübermittlung statt.
             </p>
             <p style={{ marginTop: ".5rem" }}>
               <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO
@@ -202,7 +202,7 @@ export default function DatenschutzPage() {
             <p style={{ marginTop: ".75rem" }}>
               Wir passen diese Datenschutzerklärung an, wenn sich rechtliche
               Anforderungen oder unsere Verarbeitungstätigkeiten ändern. Das Datum
-              „Stand" am Seitenanfang gibt die letzte Aktualisierung an.
+              „Stand&quot; am Seitenanfang gibt die letzte Aktualisierung an.
             </p>
           </div>
 

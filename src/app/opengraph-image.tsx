@@ -1,6 +1,5 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
 export const alt = "Reihenhaussiedlung Erding-Ost e.V.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -101,7 +100,7 @@ export default function OgImage() {
             letterSpacing: "0.04em",
           }}
         >
-          erding-ost.vercel.app
+          erding-ost.de
         </div>
       </div>
     ),
