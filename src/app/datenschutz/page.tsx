@@ -27,7 +27,7 @@ export default function DatenschutzPage() {
         <section className="section">
           <div className="section__header">
             <h1 className="section__title">Datenschutzerklärung</h1>
-            <p className="section__desc">Stand: 10.04.2026 · Informationen gemäß Art. 13 DSGVO</p>
+            <p className="section__desc">Stand: 13.11.2026 · Informationen gemäß Art. 13 DSGVO</p>
           </div>
 
           {/* ── 1. Verantwortlicher ── */}
@@ -103,7 +103,8 @@ export default function DatenschutzPage() {
             <p style={{ marginTop: ".75rem" }}>
               Auf dieser Website werden keine nicht-essentiellen Cookies, keine
               Analyse-Tools und kein Marketing-Tracking eingesetzt. Es werden keine
-              Cookie-Banner benötigt.
+              Cookie-Banner benötigt. Externe Inhalte (Karte, Videos) werden erst
+              nach Ihrem Klick geladen (siehe Abschnitte 5 und 6).
             </p>
           </div>
 
@@ -144,9 +145,54 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 6. Externe Links ── */}
+          {/* ── 6. YouTube ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>6. Externe Links</h2>
+            <h2>6. YouTube (Videos)</h2>
+            <p style={{ marginTop: ".75rem" }}>
+              Auf einzelnen Seiten (z. B. Rückblick Sommerfeste 1975/79) binden
+              wir Videos der Plattform YouTube ein. Anbieter ist die Google Ireland
+              Limited, Gordon House, Barrow Street, Dublin 4, Irland. Wir nutzen den
+              erweiterten Datenschutzmodus (youtube-nocookie.com).
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              Das Video wird erst nach Ihrer ausdrücklichen Zustimmung (Klick auf
+              „Video laden&quot;) von den Servern von YouTube geladen. Ohne diesen
+              Klick findet keine Datenübermittlung an YouTube statt.
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              Nach dem Klick werden u. a. Ihre IP-Adresse, technische
+              Verbindungsdaten und die aufgerufene Seite an YouTube übermittelt.
+              YouTube kann dabei Cookies oder vergleichbare Technologien auf Ihrem
+              Endgerät speichern bzw. auslesen. Sind Sie in Ihrem Google-Konto
+              angemeldet, kann YouTube den Abruf Ihrem Konto zuordnen. Eine
+              Übermittlung von Daten in die USA ist möglich; Google LLC ist unter
+              dem EU-US Data Privacy Framework zertifiziert.
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO sowie
+              § 25 Abs. 1 TDDDG (Einwilligung durch aktive Zustimmung).
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit
+              widerrufen, indem Sie die Seite neu laden – das Video wird dann
+              nicht erneut geladen.
+            </p>
+            <p style={{ marginTop: ".5rem" }}>
+              Weitere Informationen:{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Datenschutzerklärung von Google
+              </a>
+              .
+            </p>
+          </div>
+
+          {/* ── 7. Externe Links ── */}
+          <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
+            <h2>7. Externe Links</h2>
             <p style={{ marginTop: ".75rem" }}>
               Diese Website enthält Links auf externe Seiten (z. B. PDF-Dokumente).
               Beim Anklicken dieser Links verlassen Sie unsere Website. Für die
@@ -155,9 +201,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 7. Betroffenenrechte ── */}
+          {/* ── 8. Betroffenenrechte ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>7. Ihre Rechte als betroffene Person</h2>
+            <h2>8. Ihre Rechte als betroffene Person</h2>
             <p style={{ marginTop: ".75rem" }}>
               Sie haben gegenüber uns folgende Rechte hinsichtlich Ihrer
               personenbezogenen Daten:
@@ -179,9 +225,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 8. Beschwerderecht / Aufsichtsbehörde ── */}
+          {/* ── 9. Beschwerderecht / Aufsichtsbehörde ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>8. Beschwerderecht bei der Aufsichtsbehörde</h2>
+            <h2>9. Beschwerderecht bei der Aufsichtsbehörde</h2>
             <p style={{ marginTop: ".75rem" }}>
               Sie haben das Recht, sich bei der zuständigen
               Datenschutz-Aufsichtsbehörde zu beschweren:
@@ -196,9 +242,9 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ── 9. Änderungen ── */}
+          {/* ── 10. Änderungen ── */}
           <div className="info-card" style={{ maxWidth: 680, marginBottom: "1rem" }}>
-            <h2>9. Änderungen dieser Datenschutzerklärung</h2>
+            <h2>10. Änderungen dieser Datenschutzerklärung</h2>
             <p style={{ marginTop: ".75rem" }}>
               Wir passen diese Datenschutzerklärung an, wenn sich rechtliche
               Anforderungen oder unsere Verarbeitungstätigkeiten ändern. Das Datum
