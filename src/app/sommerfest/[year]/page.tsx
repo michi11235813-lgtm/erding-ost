@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { sommerfestData, sommerfestYears, folderForYear } from "../data";
+import YouTubeConsent from "../../components/YouTubeConsent";
 
 export function generateStaticParams() {
   return sommerfestYears.map((y) => ({ year: String(y) }));
@@ -39,10 +40,8 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
         return undefined;
       })()
     : undefined;
-  const videoSrc = data.video
-    ? isYouTube
-      ? `https://www.youtube-nocookie.com/embed/${youTubeId}?rel=0&modestbranding=1&showinfo=0`
-      : data.video.startsWith("http")
+  const videoSrc = data.video && !isYouTube
+    ? data.video.startsWith("http")
       ? data.video
       : `/bilder/${folder}/${encodeURIComponent(data.video)}`
     : undefined;
@@ -87,24 +86,7 @@ export default async function SommerfestPage({ params }: { params: Promise<{ yea
           {data.video && (
             <div style={{ marginBottom: "2rem" }}>
               {isYouTube && youTubeId ? (
-                <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, maxWidth: "800px", margin: "0 auto" }}>
-                  <iframe
-                    src={videoSrc}
-                    title={`Sommerfest ${year} Video`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      border: 0,
-                      borderRadius: "8px"
-                    }}
-                  />
-                </div>
+                <YouTubeConsent videoId={youTubeId} title={`Sommerfest ${year} Video`} />
               ) : (
                 <video
                   width="100%"
